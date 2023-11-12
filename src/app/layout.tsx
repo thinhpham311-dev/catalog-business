@@ -16,8 +16,10 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <StyledComponentsRegistry>
-          <GlobalStyles />
-          {children}
+          <div id="main">
+            <GlobalStyles />
+            {children}
+          </div>
         </StyledComponentsRegistry>
       </body>
     </html>

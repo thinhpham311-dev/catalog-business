@@ -1,14 +1,18 @@
 'use client'
 import React from 'react'
 import { createGlobalStyle } from 'styled-components'
-import tw, { theme, GlobalStyles as BaseStyles } from 'twin.macro'
+import FontsCss from './fonts.css'
+import tw, { GlobalStyles as BaseStyles } from 'twin.macro'
 
-const CustomStyles = createGlobalStyle({
-  body: {
-    WebkitTapHighlightColor: theme`colors.purple.500`,
-    ...tw`antialiased`,
-  },
-})
+const CustomStyles = createGlobalStyle`
+  ${FontsCss}
+  html, body, *{
+    ${tw`p-0 m-0 box-border overflow-x-hidden`}
+  }
+  body{
+    ${tw`bg-primary font-type-1 overflow-x-hidden`}
+  }
+`
 
 const GlobalStyles = () => (
   <>
