@@ -28,7 +28,7 @@ const HeroBottom = styled.div(() => [
     tw`absolute h-[35vh] w-[50vw] left-[10%] bottom-[5%] `,
     css`
         h1{
-            ${tw`font-type-1 font-thin text-[5vw] leading-none text-white overflow-hidden`}
+            ${tw`font-type-1 font-thin text-[5vw] h-[75%] leading-none text-white overflow-hidden`}
         }
         .hero--bottom-inner{
             ${tw`h-[35%] w-full absolute bottom-0 flex items-center justify-between`}
