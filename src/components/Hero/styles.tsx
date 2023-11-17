@@ -9,13 +9,13 @@ const NavbarWrapper = styled.nav(() => [
         .right-navbar--button{
             ${tw`flex gap-x-[5px]`}
             button{
-                ${tw`py-[10px] px-[20px] text-white text-[20px] rounded-full border-2 border-white`}
+                ${tw`py-[10px] font-type-1 px-[20px] text-white text-[20px] rounded-full border-2 border-white`}
             }
         }
     `
 ])
 
-const HeroWrapper = styled.section(() => [
+const HeroWrapper = styled.div(() => [
     tw`w-full h-[100vh] relative`,
     css`
         video{
@@ -33,7 +33,7 @@ const HeroBottom = styled.div(() => [
         .hero--bottom-inner{
             ${tw`h-[35%] w-full absolute bottom-0 flex items-center justify-between`}
             &--text{
-                ${tw`text-[1.3vw] text-white font-thin`}
+                ${tw`text-[1.3vw] text-white font-type-1 font-thin`}
             }
             &--button{
                 ${tw`py-[10px] px-[20px] bg-white text-primary-1 text-[21px] font-type-2 rounded-full`}

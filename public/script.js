@@ -58,15 +58,15 @@ function canvas() {
   const canvas = document.querySelector("#page3>canvas");
   const context = canvas.getContext("2d");
 
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
+  // canvas.width = window.innerWidth;
+  // canvas.height = window.innerHeight;
 
 
-  window.addEventListener("resize", function () {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-    render();
-  });
+  // window.addEventListener("resize", function () {
+  //   canvas.width = window.innerWidth;
+  //   canvas.height = window.innerHeight;
+  //   render();
+  // });
 
   function files(index) {
     var data = `
@@ -167,7 +167,7 @@ function canvas() {
     onUpdate: render,
   });
 
-  images[1].onload = render;
+  // images[1].onload = render;
 
   function render() {
     scaleImage(images[imageSeq.frame], context);
@@ -175,6 +175,7 @@ function canvas() {
 
   function scaleImage(img, ctx) {
     var canvas = ctx.canvas;
+    console.log(img)
     var hRatio = canvas.width / img.width;
     var vRatio = canvas.height / img.height;
     var ratio = Math.max(hRatio, vRatio);
