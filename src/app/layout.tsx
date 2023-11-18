@@ -5,7 +5,7 @@ import { ScrollTriggerProxy } from "@/components"
 import LocomotiveProvider from "@/providers/LocomotiveScrollProvider"
 
 export const metadata: Metadata = {
-  title: 'Twin example',
+  title: 'The Catalog Business',
   description: '',
 }
 
@@ -19,8 +19,8 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <StyledComponentsRegistry>
+          <GlobalStyles />
           <LocomotiveProvider>
-            <GlobalStyles />
             <ScrollTriggerProxy />
             {children}
           </LocomotiveProvider>

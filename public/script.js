@@ -13,6 +13,7 @@ function loco() {
   // tell ScrollTrigger to use these proxy methods for the "#main" element since Locomotive Scroll is hijacking things
   ScrollTrigger.scrollerProxy("#main", {
     scrollTop(value) {
+      console.log(value)
       return arguments.length ? locoScroll.scrollTo(value, 0, 0) : locoScroll.scroll.instance.scroll.y;
     }, // we don't have to define a scrollLeft because we're only scrolling vertically.
     getBoundingClientRect() {
@@ -58,15 +59,15 @@ function canvas() {
   const canvas = document.querySelector("#page3>canvas");
   const context = canvas.getContext("2d");
 
-  // canvas.width = window.innerWidth;
-  // canvas.height = window.innerHeight;
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
 
 
-  // window.addEventListener("resize", function () {
-  //   canvas.width = window.innerWidth;
-  //   canvas.height = window.innerHeight;
-  //   render();
-  // });
+  window.addEventListener("resize", function () {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    render();
+  });
 
   function files(index) {
     var data = `
@@ -140,6 +141,7 @@ function canvas() {
     return data.split("\n")[index];
   }
 
+
   const frameCount = 67;
 
   const images = [];
@@ -167,7 +169,7 @@ function canvas() {
     onUpdate: render,
   });
 
-  // images[1].onload = render;
+  images[1].onload = render;
 
   function render() {
     scaleImage(images[imageSeq.frame], context);
@@ -195,7 +197,6 @@ function canvas() {
     );
   }
   ScrollTrigger.create({
-
     trigger: "#page3",
     pin: true,
     scroller: `#main`,

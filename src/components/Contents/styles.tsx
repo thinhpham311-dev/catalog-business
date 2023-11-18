@@ -1,15 +1,18 @@
 import tw, { styled, css } from 'twin.macro'
 
 
-const CanvasWrapper = styled.div(() => [
-    tw`relative w-full h-[100vh]`,
+const ContentWrapper = styled.div(() => [
+    tw`flex items-start justify-center flex-col h-[100vh] w-[100vw] relative py-0 px-[8vw] text-white bg-primary-2`,
     css`
-        canvas{
-            ${tw`relative w-full h-[100vh]`}
-        }
+    h2{
+        ${tw`mb-[3vw] font-thin font-type-1 text-2xl`}
+    }
+    h1{
+        ${tw`font-thin leading-[1.3] w-[90%] text-[4vw] text-secondary font-type-1`}
+    }
     `
 ])
 
 export {
-    CanvasWrapper
+    ContentWrapper
 }

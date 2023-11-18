@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import { ContentWrapper } from "@/styles/GlobalStyles"
+import { ContentWrapper } from "./styles"
 import { TextParallax } from "@/components"
 
 const Contents = (props: any) => {

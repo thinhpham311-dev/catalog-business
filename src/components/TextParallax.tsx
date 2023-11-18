@@ -17,10 +17,11 @@ const TextParallax = (props: any) => {
             return gsap.to(childEl, {
                 scrollTrigger: {
                     trigger: childEl,
-                    start: `top-=10vh bottom+=23vh`,
-                    end: `bottom-=10vh bottom-=23vh`,
+                    start: `top bottom`,
+                    end: `bottom top`,
                     scroller: scroll?.el,
-                    scrub: true,
+                    scrub: 0.5,
+                    markers: true
                 },
                 stagger: .2,
                 color: `#fff`
