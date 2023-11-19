@@ -1,11 +1,16 @@
 'use client'
 import React from 'react'
 import { CanvasWrapper } from './styles'
-import { CanvasParallax } from '@/components'
+import { CanvasParallax, Circle } from '@/components'
 
-const Canvas = (props: any) => (
+interface canvasProps {
+    isCircle: boolean,
+    data: string[]
+}
+
+const Canvas = ({ isCircle, data }: canvasProps) => (
     <CanvasWrapper id="section-canvas" >
-        <CanvasParallax dataImages={props.data} />
+        <CanvasParallax isElCircle={isCircle && <Circle />} dataImages={data} />
     </CanvasWrapper>
 )
 

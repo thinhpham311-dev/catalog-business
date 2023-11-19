@@ -19,6 +19,9 @@ export default {
         "type-1": 'a',
         "type-2": 'b',
         "type-3": 'c',
+      },
+      backgroundImage: {
+        'hero-pattern': "url('https://thisismagma.com/wp-content/uploads/2023/04/magma.wp2.cubdev.com-home-1.jpeg')",
       }
     },
   },

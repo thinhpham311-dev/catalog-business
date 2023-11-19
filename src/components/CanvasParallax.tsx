@@ -7,12 +7,13 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 
 interface CanvasProps {
     dataImages: string[],
+    isElCircle: any
 }
 
 
 gsap.registerPlugin(ScrollTrigger);
 
-const CanvasParallax = ({ dataImages }: CanvasProps) => {
+const CanvasParallax = ({ dataImages, isElCircle }: CanvasProps) => {
     let images: any[] = []
     const imageSeq = { frame: 1 };
     const { height, width } = useWindowDimensions();
@@ -70,7 +71,6 @@ const CanvasParallax = ({ dataImages }: CanvasProps) => {
                 onUpdate: render,
             });
         }
-
     }
 
     useEffect(() => {
@@ -79,6 +79,7 @@ const CanvasParallax = ({ dataImages }: CanvasProps) => {
             img.src = dataImages[i];
             images.push(img)
         }
+
         images[1].onload = render;
         createScroll()
         return () => {
@@ -88,8 +89,9 @@ const CanvasParallax = ({ dataImages }: CanvasProps) => {
     }, [scrollCanvas])
 
     return (
-        <div className="inner-canvas" ref={canvasRef} data-scroll data-scroll-sticky data-scroll-offset={`0%`} data-scroll-target="#section-canvas">
+        <div className="inner-canvas" ref={canvasRef} data-scroll data-scroll-sticky data-scroll-position={`0% 0%`} data-scroll-target="#section-canvas">
             <canvas></canvas>
+            {isElCircle}
         </div>
     )
 }
