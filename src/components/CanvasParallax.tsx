@@ -1,28 +1,34 @@
 'use client'
 import React, { useRef, useEffect } from 'react'
-import { CanvasWrapper } from '@/styles/GlobalStyles'
+import { useWindowDimensions } from "@/utils"
 import { gsap } from "gsap";
 import { useLocomotiveScroll } from "react-locomotive-scroll";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
 interface CanvasProps {
-    data: string[],
+    dataImages: string[],
 }
+
 
 gsap.registerPlugin(ScrollTrigger);
 
-const CanvasParallax = ({ data }: CanvasProps) => {
+const CanvasParallax = ({ dataImages }: CanvasProps) => {
     let images: any[] = []
     const imageSeq = { frame: 1 };
-
+    const { height, width } = useWindowDimensions();
     const { scroll } = useLocomotiveScroll();
     const canvasRef = useRef<HTMLDivElement>(null)
     const scrollCanvas = canvasRef.current as HTMLDivElement
 
     const render = () => {
         const canvasEl = canvasRef.current?.querySelector("canvas")
+        const canvas = canvasEl as HTMLCanvasElement
+        canvas.height = height
+        canvas.width = width
         const context = canvasEl?.getContext("2d");
-        scaleImage(images[imageSeq.frame], context);
+        if (context) {
+            scaleImage(images[imageSeq.frame], context);
+        }
     }
 
     const scaleImage = (img: HTMLImageElement, ctx: any) => {
@@ -47,10 +53,9 @@ const CanvasParallax = ({ data }: CanvasProps) => {
     }
 
     const createScroll = () => {
-
         if (scroll) {
             gsap.to(imageSeq, {
-                frame: data.length - 1,
+                frame: dataImages.length - 1,
                 snap: "frame",
                 ease: `none`,
                 scrollTrigger: {
@@ -60,6 +65,7 @@ const CanvasParallax = ({ data }: CanvasProps) => {
                     start: `top top`,
                     end: `250% top`,
                     scrub: .5,
+                    pinSpacing: false
                 },
                 onUpdate: render,
             });
@@ -68,9 +74,9 @@ const CanvasParallax = ({ data }: CanvasProps) => {
     }
 
     useEffect(() => {
-        for (let i = 0; i < data.length; i++) {
+        for (let i = 0; i < dataImages.length; i++) {
             const img = new Image();
-            img.src = data[i];
+            img.src = dataImages[i];
             images.push(img)
         }
         images[1].onload = render;
@@ -82,9 +88,9 @@ const CanvasParallax = ({ data }: CanvasProps) => {
     }, [scrollCanvas])
 
     return (
-        <CanvasWrapper ref={canvasRef}>
+        <div className="inner-canvas" ref={canvasRef} data-scroll data-scroll-sticky data-scroll-offset={`0%`} data-scroll-target="#section-canvas">
             <canvas></canvas>
-        </CanvasWrapper>
+        </div>
     )
 }
 

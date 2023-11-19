@@ -5,7 +5,7 @@ import { TextParallax } from "@/components"
 
 const Contents = (props: any) => {
     return (
-        <ContentWrapper>
+        <ContentWrapper $_bg={props._bg}>
             <h2>{props.subTitle}</h2>
             <TextParallax>{props.title}</TextParallax>
         </ContentWrapper >

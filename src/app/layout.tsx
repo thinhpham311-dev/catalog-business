@@ -19,9 +19,9 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <StyledComponentsRegistry>
-          <GlobalStyles />
           <LocomotiveProvider>
             <ScrollTriggerProxy />
+            <GlobalStyles />
             {children}
           </LocomotiveProvider>
         </StyledComponentsRegistry>

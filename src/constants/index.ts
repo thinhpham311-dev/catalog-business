@@ -1,4 +1,4 @@
-const dataImages = [
+const dataImagesCertify = [
     "/frames00007.png",
     "/frames00010.png",
     "/frames00013.png",
@@ -67,12 +67,65 @@ const dataImages = [
     "/frames00202.png"
 ]
 
-
-const imageSeq = {
-    frame: 1,
-};
+const dataImagesConnection = [
+    "/bridges00004.png",
+    "/bridges00007.png",
+    "/bridges00010.png",
+    "/bridges00013.png",
+    "/bridges00016.png",
+    "/bridges00019.png",
+    "/bridges00022.png",
+    "/bridges00025.png",
+    "/bridges00028.png",
+    "/bridges00031.png",
+    "/bridges00034.png",
+    "/bridges00037.png",
+    "/bridges00040.png",
+    "/bridges00043.png",
+    "/bridges00046.png",
+    "/bridges00049.png",
+    "/bridges00052.png",
+    "/bridges00055.png",
+    "/bridges00058.png",
+    "/bridges00061.png",
+    "/bridges00064.png",
+    "/bridges00067.png",
+    "/bridges00070.png",
+    "/bridges00073.png",
+    "/bridges00076.png",
+    "/bridges00079.png",
+    "/bridges00082.png",
+    "/bridges00085.png",
+    "/bridges00088.png",
+    "/bridges00091.png",
+    "/bridges00094.png",
+    "/bridges00097.png",
+    "/bridges00100.png",
+    "/bridges00103.png",
+    "/bridges00106.png",
+    "/bridges00109.png",
+    "/bridges00112.png",
+    "/bridges00115.png",
+    "/bridges00118.png",
+    "/bridges00121.png",
+    "/bridges00124.png",
+    "/bridges00127.png",
+    "/bridges00130.png",
+    "/bridges00133.png",
+    "/bridges00136.png",
+    "/bridges00139.png",
+    "/bridges00142.png",
+    "/bridges00145.png",
+    "/bridges00148.png",
+    "/bridges00151.png",
+    "/bridges00154.png",
+    "/bridges00157.png",
+    "/bridges00160.png",
+    "/bridges00163.png",
+]
 
 export {
-    dataImages,
-    imageSeq
+    dataImagesCertify,
+    dataImagesConnection
+
 }

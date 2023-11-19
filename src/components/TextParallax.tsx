@@ -13,20 +13,22 @@ const TextParallax = (props: any) => {
 
     const handleParallaxText = (param: HTMLHeadingElement) => {
         const childEl = param?.querySelectorAll("span")
-        if (scroll) {
-            return gsap.to(childEl, {
-                scrollTrigger: {
-                    trigger: childEl,
-                    start: `top bottom`,
-                    end: `bottom top`,
-                    scroller: scroll?.el,
-                    scrub: 0.5,
-                    markers: true
-                },
-                stagger: .2,
-                color: `#fff`
-            })
-        }
+        setTimeout(() => {
+
+            if (scroll) {
+                return gsap.to(childEl, {
+                    scrollTrigger: {
+                        trigger: childEl,
+                        start: `top bottom`,
+                        end: `bottom top`,
+                        scroller: scroll?.el,
+                        scrub: .5,
+                    },
+                    stagger: .2,
+                    color: `#fff`
+                })
+            }
+        })
     }
 
     useEffect(() => {
@@ -39,10 +41,7 @@ const TextParallax = (props: any) => {
             if (clutter && clutter.length > 0)
                 handleParallaxText(scrollText)
         }
-        return () => {
-            ScrollTrigger.addEventListener("refresh", () => scroll?.update());
-            ScrollTrigger.refresh();
-        };
+
     }, [scrollText]);
 
 

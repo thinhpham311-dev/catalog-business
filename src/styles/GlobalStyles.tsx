@@ -14,7 +14,7 @@ const CustomStyles = createGlobalStyle`
     ${tw`p-0 m-0 box-border`}
   }
   main{
-    ${tw`relative overflow-hidden`}
+    ${tw`relative overflow-hidden bg-primary`}
   }
   html.has-scroll-smooth {
     overflow: hidden; }
@@ -31,23 +31,12 @@ const CustomStyles = createGlobalStyle`
   .has-scroll-smooth [data-scroll-container] {
     min-height: 100vh; }
   
-  [data-scroll-direction="horizontal"] [data-scroll-container] {
-    height: 100vh;
-    display: inline-block;
-    white-space: nowrap; }
-  
-  [data-scroll-direction="horizontal"] [data-scroll-section] {
-    display: inline-block;
-    vertical-align: top;
-    white-space: nowrap;
-    height: 100%; }
-  
   .c-scrollbar {
     position: absolute;
     right: 0;
     top: 0;
     width: 11px;
-    height: 100%;
+    height: 100vh;
     transform-origin: center right;
     transition: transform 0.3s, opacity 0.3s;
     opacity: 0; }
@@ -55,14 +44,6 @@ const CustomStyles = createGlobalStyle`
       transform: scaleX(1.45); }
     .c-scrollbar:hover, .has-scroll-scrolling .c-scrollbar, .has-scroll-dragging .c-scrollbar {
       opacity: 1; }
-    [data-scroll-direction="horizontal"] .c-scrollbar {
-      width: 100%;
-      height: 10px;
-      top: auto;
-      bottom: 0;
-      transform: scaleY(1); }
-      [data-scroll-direction="horizontal"] .c-scrollbar:hover {
-        transform: scaleY(1.3); }
   
   .c-scrollbar_thumb {
     position: absolute;
@@ -78,20 +59,10 @@ const CustomStyles = createGlobalStyle`
     .has-scroll-dragging .c-scrollbar_thumb {
       cursor: -webkit-grabbing;
       cursor: grabbing; }
-    [data-scroll-direction="horizontal"] .c-scrollbar_thumb {
-      right: auto;
-      bottom: 0; }
 `
 
 
-export const CanvasWrapper = styled.div(() => [
-  tw`relative w-full h-[100vh] bg-black`,
-  css`
-      canvas{
-          ${tw`relative max-w-full max-h-[100vh]`}
-      }
-  `
-])
+
 
 const GlobalStyles = () => (
   <>
