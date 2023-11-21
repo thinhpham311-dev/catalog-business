@@ -1,4 +1,5 @@
 const dataImagesCertify = [
+    "/frames00004.png",
     "/frames00007.png",
     "/frames00010.png",
     "/frames00013.png",
@@ -68,6 +69,7 @@ const dataImagesCertify = [
 ]
 
 const dataImagesConnection = [
+    "/bridges00002.png",
     "/bridges00004.png",
     "/bridges00007.png",
     "/bridges00010.png",
@@ -263,8 +265,20 @@ const dataImagesIncrease = [
     "https://thisismagma.com/assets/home/lore/seq/136.webp",
 ]
 
+const dataImageBranchs = [
+    "/home-2-2x.png",
+    "/home-3-2x.png",
+    "/home-4-2x.png",
+    "/home-5-2x.png",
+    "/home-6-2x.png",
+    "/home-7-2x.png",
+    "/home-8-2x.png",
+    "/home-da-partners-2.png",
+]
+
 export {
     dataImagesCertify,
     dataImagesConnection,
-    dataImagesIncrease
+    dataImagesIncrease,
+    dataImageBranchs
 }

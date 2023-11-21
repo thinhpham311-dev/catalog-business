@@ -22,6 +22,15 @@ export default {
       },
       backgroundImage: {
         'hero-pattern': "url('https://thisismagma.com/wp-content/uploads/2023/04/magma.wp2.cubdev.com-home-1.jpeg')",
+      },
+      keyframes: {
+        scroll: {
+          'from': { transform: 'translateX(0)' },
+          'to': { transform: 'translateX(calc(-300px * 2))' },
+        }
+      },
+      animation: {
+        scroll: 'scroll 10s linear infinite',
       }
     },
   },

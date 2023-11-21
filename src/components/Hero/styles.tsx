@@ -1,13 +1,13 @@
 import tw, { styled, css, theme } from 'twin.macro'
 
 const NavbarWrapper = styled.nav(() => [
-    tw`flex items-center justify-between py-0 px-[30px] absolute h-[10vh] w-full`,
+    tw`flex items-center justify-between py-0 px-[30px] absolute h-[10vh] w-full z-50`,
     css`
         img{
             ${tw`mt-[-1.7vw] w-[9%]`}
         }
         .right-navbar--button{
-            ${tw`flex gap-x-[5px]`}
+            ${tw`flex gap-x-[10px]`}
             button{
                 ${tw`py-[10px] font-type-1 px-[20px] text-white text-[20px] rounded-full border-2 border-white`}
             }

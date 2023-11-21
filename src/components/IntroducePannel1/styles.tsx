@@ -1,7 +1,7 @@
 import tw, { styled, css } from 'twin.macro'
 
 const PannerIntroducesWrapper = styled.div(() => [
-    tw`relative h-[100vh] w-full bg-primary-2`,
+    tw`relative h-[100vh] w-full bg-primary-2 z-10`,
     css`
         video{
             ${tw`h-full w-full object-cover`}

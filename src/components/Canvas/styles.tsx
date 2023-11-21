@@ -6,9 +6,15 @@ const CanvasWrapper = styled.div(() => [
         .inner-canvas{
          ${tw`relative w-full h-[100vh] `}
             .circle{
-                ${tw`flex items-center justify-center absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 z-[9] h-[30vw] w-[30vw] rounded-full border-2 border-white`}
+                ${tw`flex items-center justify-center absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 z-[9] h-[34vw] w-[34vw] rounded-full border-[0.5px] border-[#ffffff3b] z-50`}
                 &-inner{
-                    ${tw`h-[70%] w-[70%] rounded-full bg-transparent border-2 border-white`}
+                    ${tw`h-[50%] w-[50%] flex items-center justify-center rounded-full bg-transparent border-[0.5px] border-white`}
+                    &--text{
+                        ${tw`text-center text-white font-type-1`}
+                        h1{
+                            ${tw`text-[3vw] opacity-[0.8] font-thin`}
+                        }
+                    }     
                 }
             }
         }

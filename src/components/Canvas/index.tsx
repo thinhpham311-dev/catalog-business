@@ -6,11 +6,12 @@ import { CanvasParallax, Circle } from '@/components'
 interface canvasProps {
     isCircle: boolean,
     data: string[]
+    numbers: number | null
 }
 
-const Canvas = ({ isCircle, data }: canvasProps) => (
+const Canvas = ({ isCircle, data, numbers }: canvasProps) => (
     <CanvasWrapper id="section-canvas" >
-        <CanvasParallax isElCircle={isCircle && <Circle />} dataImages={data} />
+        <CanvasParallax isElCircle={isCircle && <Circle countNumber={numbers} />} dataImages={data} />
     </CanvasWrapper>
 )
 

@@ -8,7 +8,7 @@ const IntroduceContentWrapper = styled.div(() => [
             &-inner{
                 ${tw`flex items-start flex-col h-[33.3%] w-full font-type-1 text-white`}
                 h1{
-                    ${tw`text-[2vw]`}
+                    ${tw`text-[2.25vw] font-bold`}
                 }
                 p{
                     ${tw`mt-[2vw] text-[1.3vw] w-[80%]`}

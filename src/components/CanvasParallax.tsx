@@ -77,6 +77,7 @@ const CanvasParallax = ({ dataImages, isElCircle }: CanvasProps) => {
         for (let i = 0; i < dataImages.length; i++) {
             const img = new Image();
             img.src = dataImages[i];
+            img.srcset = dataImages[i];
             images.push(img)
         }
 
@@ -89,7 +90,7 @@ const CanvasParallax = ({ dataImages, isElCircle }: CanvasProps) => {
     }, [scrollCanvas])
 
     return (
-        <div className="inner-canvas" ref={canvasRef} data-scroll data-scroll-sticky data-scroll-position={`0% 0%`} data-scroll-target="#section-canvas">
+        <div className="inner-canvas" ref={canvasRef} data-scroll data-scroll-sticky data-scroll-position={`0 0`} data-scroll-target="#section-canvas">
             <canvas></canvas>
             {isElCircle}
         </div>
