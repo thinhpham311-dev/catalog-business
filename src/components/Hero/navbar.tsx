@@ -7,7 +7,7 @@ import { NavbarWrapper } from './styles'
 const Navbar = () => (
     <NavbarWrapper>
         <Image
-            src="/Screenshot 2023-05-30 220719.png"
+            src="/logoMagma.png"
             width={100}
             height={100}
             alt="Picture of the author"

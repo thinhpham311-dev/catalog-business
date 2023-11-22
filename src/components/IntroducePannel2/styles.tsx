@@ -1,18 +1,21 @@
 import tw, { styled, css } from 'twin.macro'
 
 const IntroducePannel2Wrapper = styled.div(() => [
-    tw`flex relative h-[100vh] w-full bg-primary-2`,
+    tw`pt-[5vh] w-full bg-primary-2 `,
     css`
+        .container{
+           ${tw`flex flex-wrap container mx-auto px-[4vw]`} 
+        }
         .content-left{
-            ${tw`h-full w-[40%] relative font-type-1`}
+            ${tw`h-full xl:w-[40%] w-full font-type-1 xl:mx-0 mx-[4vw] mb-[5vh]`}
             h1{
-                ${tw`absolute top-[40%] right-[5%] -translate-y-1/2 text-[5vw] font-thin text-white leading-[1]`}
+                ${tw`xl:text-[5vw] text-[16vw] font-thin text-white leading-[1]`}
             }
         }
         .content-right{
-            ${tw`h-full w-[60%] relative `}
+            ${tw`h-full xl:w-[60%] w-full xl:px-0  px-[4vw]`}
             &--center {
-                ${tw`h-[50%] w-[85%] rounded-[10px] absolute top-1/2 -translate-y-1/2 bg-cover bg-hero-pattern left-[5%]`}
+                ${tw`w-full rounded-[10px] bg-cover bg-hero-pattern bg-center xl:h-[50vh] h-[30vh]`}
             }
         }
     `

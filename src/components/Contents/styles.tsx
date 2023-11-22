@@ -6,13 +6,16 @@ interface styleProps {
 
 const ContentWrapper = styled.div<styleProps>(({ $_bg }) => {
     return [
-        tw`flex items-start justify-center flex-col h-[100vh] w-[100vw] relative py-0 px-[8vw] text-white bg-primary-2`,
+        tw`flex items-start justify-center flex-col xl:h-[100vh] h-[auto] w-[100vw] relative xl:py-0 py-[10vh] text-white bg-primary-2`,
         css`
+        .container{
+            ${tw`container mx-auto px-[4vw]`}
+        }
     h2{
-        ${tw`mb-[3vw] font-thin font-type-1 text-2xl`}
+        ${tw`mb-[3vw] font-thin font-type-1 xl:text-2xl text-sm`}
     }
     h1{
-        ${tw`font-thin leading-[1.3] w-[90%] text-[4vw] text-secondary font-type-1`}
+        ${tw`font-thin leading-[1.3] w-full xl:text-[4vw] text-[7.5vw] text-secondary font-type-1`}
     }
     `, chooseBg($_bg)]
 })

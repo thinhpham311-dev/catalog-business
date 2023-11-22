@@ -1,15 +1,18 @@
 import tw, { styled, css, theme } from 'twin.macro'
 
 const NavbarWrapper = styled.nav(() => [
-    tw`flex items-center justify-between py-0 px-[30px] absolute h-[10vh] w-full z-50`,
+    tw`flex items-center justify-between py-0 px-[4vw] absolute h-[12vh] w-full z-50`,
     css`
         img{
-            ${tw`mt-[-1.7vw] w-[9%]`}
+            ${tw`xl:w-[70px] h-[auto] w-[50px]`}
         }
         .right-navbar--button{
             ${tw`flex gap-x-[10px]`}
             button{
-                ${tw`py-[10px] font-type-1 px-[20px] text-white text-[20px] rounded-full border-2 border-white`}
+                ${tw`py-[10px] font-type-1 px-[20px] text-white text-[20px] rounded-full border-[0.5px] border-white`}
+            }
+            &-demo{
+                ${tw`xl:block hidden`}
             }
         }
     `
@@ -25,18 +28,24 @@ const HeroWrapper = styled.div(() => [
 ])
 
 const HeroBottom = styled.div(() => [
-    tw`absolute h-[35vh] w-[50vw] left-[10%] bottom-[5%] `,
+    tw`absolute  xl:bottom-0 bottom-[15%] left-0 h-[auto] my-[10vh] w-full`,
     css`
+    .container{
+        ${tw`container mx-auto px-[4vw]`}
+    }
         h1{
-            ${tw`font-type-1 font-thin text-[5vw] h-[75%] leading-none text-white overflow-hidden`}
+            ${tw`font-type-1 font-thin xl:text-[7vw] lg:text-[6vw] md:text-[10vw] text-[13vw] leading-[1.1] text-white my-[3vh]`}
         }
         .hero--bottom-inner{
-            ${tw`h-[35%] w-full absolute bottom-0 flex items-center justify-between`}
+            ${tw`block xl:flex items-center justify-between xl:w-1/2 w-full`}
             &--text{
-                ${tw`text-[1.3vw] text-white font-type-1 font-thin`}
+                ${tw` xl:text-[1.3vw] lg:text-[2vw] md:text-[3vw] text-[5vw] text-white font-type-1 font-thin`}
+                br{
+                    ${tw`xl:block lg:block md:block hidden`}
+                }
             }
             &--button{
-                ${tw`py-[10px] px-[20px] bg-white text-primary-1 text-[21px] font-type-2 rounded-full`}
+                ${tw`my-[3vh] xl:px-[3vw] px-[10vw] py-[1.5vh] bg-white text-primary-1 xl:text-[18px] lg:text-[18px] md:text-[18px] text-[16px] font-type-2 rounded-full`}
             }
         }
     `

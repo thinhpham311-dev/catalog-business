@@ -1,17 +1,20 @@
 import tw, { styled, css } from 'twin.macro'
 
 const IntroduceContentWrapper = styled.div(() => [
-    tw`relative h-[100vh] w-full bg-primary-2`,
+    tw`relative pb-[10vh] pt-[5vh] h-[auto] w-full bg-primary-2`,
     css`
+        .container{
+            ${tw`container mx-auto px-[4vw]`}
+        }
         .content{
-            ${tw`h-full w-[60%] relative left-[40%]`}
+            ${tw`h-full xl:w-[70%] w-full relative xl:left-[40%]`}
             &-inner{
-                ${tw`flex items-start flex-col h-[33.3%] w-full font-type-1 text-white`}
+                ${tw`flex items-start xl:mb-0 my-[5vh] flex-col h-[33.3%] w-full font-type-1 text-white`}
                 h1{
-                    ${tw`text-[2.25vw] font-bold`}
+                    ${tw`xl:text-[2.25vw] text-[7vw] font-bold`}
                 }
                 p{
-                    ${tw`mt-[2vw] text-[1.3vw] w-[80%]`}
+                    ${tw`mt-[2vw] xl:text-[1.3vw] text-[5vw] xl:w-[80%] w-full`}
                 }
             }
         }
