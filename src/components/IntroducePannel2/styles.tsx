@@ -7,9 +7,9 @@ const IntroducePannel2Wrapper = styled.div(() => [
            ${tw`flex flex-wrap container mx-auto px-[4vw]`} 
         }
         .content-left{
-            ${tw`h-full xl:w-[40%] w-full font-type-1 xl:mx-0 mb-[5vh]`}
+            ${tw`h-full xl:w-[40%] w-full font-type-1 xl:mx-0 lg:mb-[5vh] mb-[3vh]`}
             h1{
-                ${tw`xl:text-[5vw] text-[12vw] font-thin text-white leading-[1]`}
+                ${tw`xl:text-3xl lg:text-2xl text-lg font-thin text-white leading-[100%]`}
             }
         }
         .content-right{

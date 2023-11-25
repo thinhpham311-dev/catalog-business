@@ -9,12 +9,12 @@ const BranchWrapper = styled.div(() => [
         .branchs-inner{
             ${tw`xl:w-[58%] w-full ml-auto text-white font-type-1`}
             h1{
-                ${tw`xl:text-[7vw] text-[12vw]  font-thin`}
+                ${tw`xl:text-3xl lg:text-3xl text-lg   font-thin`}
             }
             p{
-                ${tw`xl:text-[1.3vw] text-[5vw]  font-thin`}
+                ${tw`xl:text-3xs lg:text-3xs text-4xs font-thin`}
                 br{
-                    ${tw`xl:block lg:block md:hidden hidden`}
+                    ${tw`xl:block lg:block  hidden`}
                 }
             }
         }

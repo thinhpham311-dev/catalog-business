@@ -1,3 +1,4 @@
+export { default as Navbar } from "./Navbar"
 export { default as Hero } from "./Hero"
 export { default as Contents } from "./Contents"
 export { default as TextParallax } from "./TextParallax"

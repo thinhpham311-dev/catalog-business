@@ -1,13 +1,21 @@
 'use client'
 import { dataImagesCertify, dataImagesConnection, dataImagesIncrease, dataImageBranchs } from "@/constants"
 import {
-  Hero, Contents,
-  Canvas, IntroducePannel1, IntroducePannel2, IntroduceContent, Posts, Branchs, Socials
+  Navbar,
+  Hero,
+  Contents,
+  Canvas,
+  IntroducePannel1,
+  IntroducePannel2,
+  IntroduceContent,
+  Posts, Branchs,
+  Socials
 } from '@/components'
 
 const Home = () => {
   return (
     <>
+      <Navbar />
       <Hero />
       <Contents
         _bg="primary-2"

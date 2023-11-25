@@ -16,6 +16,18 @@ const CustomStyles = createGlobalStyle`
   main{
     ${tw`relative overflow-hidden bg-primary`}
   }
+
+  h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    padding: 0;
+    font-weight: inherit;
+    font-style: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    text-align: inherit;
+    letter-spacing: inherit;
+}
+
   html.has-scroll-smooth {
     overflow: hidden; }
   

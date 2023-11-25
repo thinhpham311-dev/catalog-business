@@ -8,11 +8,11 @@ const CanvasWrapper = styled.div(() => [
             .circle{
                 ${tw`flex items-center justify-center absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 z-[9] xl:h-[34vw] xl:w-[34vw] h-[80vw] w-[80vw]  rounded-full border-[0.5px] border-[#ffffff3b] z-50`}
                 &-inner{
-                    ${tw`xl:h-[50%] xl:w-[50%] h-[70%] w-[70%] flex items-center justify-center rounded-full bg-transparent border-[0.5px] border-white`}
+                    ${tw`xl:h-[60%] xl:w-[60%] h-[70%] w-[70%] flex items-center justify-center rounded-full bg-transparent border-[0.5px] border-white`}
                     &--text{
-                        ${tw`text-center text-white font-type-1`}
+                        ${tw`xl:text-4xs lg:text-4xs text-5xs text-center text-white font-type-1`}
                         h1{
-                            ${tw`xl:text-[3vw] text-[12vw] opacity-[0.8] font-thin`}
+                            ${tw`xl:text-2xs lg:text-2xs text-3xs opacity-[0.8] font-thin`}
                         }
                     }     
                 }

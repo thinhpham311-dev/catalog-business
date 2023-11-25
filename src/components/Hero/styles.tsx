@@ -1,22 +1,5 @@
 import tw, { styled, css, theme } from 'twin.macro'
 
-const NavbarWrapper = styled.nav(() => [
-    tw`flex items-center justify-between py-0 px-[4vw] absolute h-[12vh] w-full z-50`,
-    css`
-        img{
-            ${tw`xl:w-[70px] h-[auto] w-[50px]`}
-        }
-        .right-navbar--button{
-            ${tw`flex gap-x-[10px]`}
-            button{
-                ${tw`py-[10px] font-type-1 px-[20px] text-white text-[20px] rounded-full border-[0.5px] border-white`}
-            }
-            &-demo{
-                ${tw`xl:block hidden`}
-            }
-        }
-    `
-])
 
 const HeroWrapper = styled.div(() => [
     tw`w-full h-[100vh] relative`,
@@ -28,31 +11,33 @@ const HeroWrapper = styled.div(() => [
 ])
 
 const HeroBottom = styled.div(() => [
-    tw`absolute  xl:bottom-0 bottom-[15%] left-0 h-[auto] my-[10vh] w-full`,
+    tw`absolute xl:bottom-0  lg:bottom-0 xl:translate-y-0 lg:translate-y-0 bottom-1/2 translate-y-1/2 left-0 h-[auto] xl:py-[10vh] lg:py-[10vh] py-0 w-full`,
     css`
     .container{
         ${tw`container mx-auto px-[4vw]`}
     }
         h1{
-            ${tw`font-type-1 font-thin xl:text-[7vw] lg:text-[6vw] md:text-[10vw] text-[13vw] leading-[1.1] text-white my-[3vh]`}
+            ${tw`xl:text-3xl lg:text-2xl text-lg font-thin leading-[100%]   font-type-1 font-thin  text-white my-[3vh]`}
+            br{
+                ${tw`sm:block hidden`}
+            }
         }
         .hero--bottom-inner{
-            ${tw`block xl:flex items-center justify-between xl:w-1/2 w-full`}
+            ${tw`block xl:flex items-center justify-between xl:w-[60%] w-full`}
             &--text{
-                ${tw` xl:text-[1.3vw] lg:text-[2vw] md:text-[3vw] text-[5vw] text-white font-type-1 font-thin`}
+                ${tw`xl:text-3xs lg:text-3xs text-4xs text-white font-type-1 font-thin`}
                 br{
-                    ${tw`xl:block lg:block md:block hidden`}
+                    ${tw`sm:block hidden`}
                 }
             }
             &--button{
-                ${tw`my-[3vh] xl:px-[3vw] px-[10vw] py-[1.5vh] bg-white text-primary-1 xl:text-[18px] lg:text-[18px] md:text-[18px] text-[16px] font-type-2 rounded-full`}
+                ${tw`xl:text-4xs lg:text-4xs text-5xs my-[3vh] xl:px-[3vw] px-[10vw] py-[2.5vh] bg-white text-primary-1  font-type-2 rounded-full`}
             }
         }
     `
 ])
 
 export {
-    NavbarWrapper,
     HeroWrapper,
     HeroBottom
 }

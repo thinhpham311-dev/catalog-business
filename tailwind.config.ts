@@ -33,6 +33,21 @@ export default {
         scroll: 'scroll 10s linear infinite',
       }
     },
+    fontSize: {
+      '5xl': '12rem',
+      '4xl': '8rem',
+      '3xl': '6rem',
+      '2xl': '4.5rem',
+      'xl': '4rem',
+      'lg': '3.6rem',
+      'md': '3rem',
+      'sm': '2.4rem',
+      'xs': '2.2rem',
+      '2xs': '1.8rem',
+      '3xs': '1.2rem',
+      '4xs': '1rem',
+      '5xs': '0.75rem'
+    },
   },
   plugins: [],
 } satisfies Config

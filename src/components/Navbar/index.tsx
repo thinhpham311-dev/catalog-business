@@ -13,7 +13,7 @@ const Navbar = () => (
             alt="Picture of the author"
         />
         <div className="right-navbar--button" id="right-nav">
-            <button className="right-navbar--button-demo" type="button">Book a Demo</button>
+            <button className="right-navbar--button-demo" type="button"><span>Book a Demo</span></button>
             <button className="right-navbar--button-menu" type="button"><CiMenuBurger /></button>
         </div>
     </NavbarWrapper>

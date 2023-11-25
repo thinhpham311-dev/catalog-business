@@ -11,10 +11,10 @@ const IntroduceContentWrapper = styled.div(() => [
             &-inner{
                 ${tw`flex items-start xl:mb-0 my-[5vh] flex-col h-[33.3%] w-full font-type-1 text-white`}
                 h1{
-                    ${tw`xl:text-[2.25vw] text-[7vw] font-bold`}
+                    ${tw`xl:text-xs lg:text-xs text-2xs font-bold leading-[120%]`}
                 }
                 p{
-                    ${tw`mt-[2vw] xl:text-[1.3vw] text-[5vw] xl:w-[80%] w-full`}
+                    ${tw`mt-[2vw] xl:text-3xs lg:text-3xs text-4xs  xl:w-[80%] w-full`}
                 }
             }
         }
