@@ -9,7 +9,8 @@ import {
   IntroducePannel2,
   IntroduceContent,
   Posts, Branchs,
-  Socials
+  Socials,
+  Footer
 } from '@/components'
 
 const Home = () => {
@@ -40,6 +41,7 @@ const Home = () => {
       <Posts />
       <Branchs data={dataImageBranchs} />
       <Socials />
+      <Footer />
     </>
   )
 }

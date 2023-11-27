@@ -11,19 +11,25 @@ const Socials = (props: any) => {
             <Books />
             <SocialsWrapper>
                 <div className="socials-inner">
-                    <h1>Twitter</h1>
-                    <FiArrowUpRight />
-                    <div className="center"></div>
+                    <div className="container">
+                        <h1>Twitter</h1>
+                        <FiArrowUpRight />
+                        <div className="center"></div>
+                    </div>
                 </div>
                 <div className="socials-inner">
-                    <h1>LinkedIn</h1>
-                    <FiArrowUpRight />
-                    <div className="center"></div>
+                    <div className="container">
+                        <h1>LinkedIn</h1>
+                        <FiArrowUpRight />
+                        <div className="center"></div>
+                    </div>
                 </div>
                 <div className="socials-inner">
-                    <h1>Instagram</h1>
-                    <FiArrowUpRight />
-                    <div className="center"></div>
+                    <div className="container">
+                        <h1>Instagram</h1>
+                        <FiArrowUpRight />
+                        <div className="center"></div>
+                    </div>
                 </div>
             </SocialsWrapper>
         </>

@@ -14,7 +14,7 @@ const CustomStyles = createGlobalStyle`
     ${tw`p-0 m-0 box-border`}
   }
   main{
-    ${tw`relative overflow-hidden bg-primary`}
+    ${tw`relative  bg-primary`}
   }
 
   h1, h2, h3, h4, h5, h6, p {

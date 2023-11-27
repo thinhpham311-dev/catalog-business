@@ -6,7 +6,7 @@ const PostsWrapper = styled.div(() => [
     .post-container{
         ${tw`container mx-auto px-[4vw]`}
         h1.post-title{
-            ${tw`xl:text-3xl lg:text-2xl text-lg   text-black font-thin`}
+            ${tw`xl:text-3xl lg:text-2xl text-lg mb-[5vh]  text-black font-thin`}
         }
         .post-inner{
             ${tw`flex gap-x-[4vw] flex-wrap top-[20%] relative xl:mb-[2vw] mb-[5vh] h-[20%] w-full`}
@@ -17,12 +17,12 @@ const PostsWrapper = styled.div(() => [
                 }
             }
             &--right{
-                ${tw`mt-[5vw] text-black h-full xl:w-[50%] w-full`}
+                ${tw`mt-[5vh] text-black h-full xl:w-[50%] w-full`}
                 h1{
                     ${tw`xl:text-xs lg:text-xs text-3xs`}
                 }
                 h4{
-                    ${tw`font-thin xl:text-3xs lg:text-3xs text-5xs`}
+                    ${tw`font-thin xl:text-3xs lg:text-3xs text-5xs text-[#3736369c]`}
                 }
             }
         }

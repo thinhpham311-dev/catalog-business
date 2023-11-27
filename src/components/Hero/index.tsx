@@ -5,7 +5,6 @@ import { HeroWrapper, HeroBottom } from './styles'
 
 const Hero = () => (
     <>
-
         <HeroWrapper data-scroll data-scroll-speed="-5" id="hero">
             <HeroBottom>
                 <div className="container">

@@ -10,9 +10,9 @@ const CanvasWrapper = styled.div(() => [
                 &-inner{
                     ${tw`xl:h-[60%] xl:w-[60%] h-[70%] w-[70%] flex items-center justify-center rounded-full bg-transparent border-[0.5px] border-white`}
                     &--text{
-                        ${tw`xl:text-4xs lg:text-4xs text-5xs text-center text-white font-type-1`}
+                        ${tw` text-5xs text-center text-white font-type-1`}
                         h1{
-                            ${tw`xl:text-2xs lg:text-2xs text-3xs opacity-[0.8] font-thin`}
+                            ${tw`xl:text-sm lg:text-xs text-2xs opacity-[0.8] font-thin`}
                         }
                     }     
                 }

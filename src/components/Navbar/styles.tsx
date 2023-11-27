@@ -9,7 +9,7 @@ const NavbarWrapper = styled.nav(() => [
         .right-navbar--button{
             ${tw`flex gap-x-[10px]`}
             button{
-                ${tw`xl:text-4xs lg:text-4xs text-5xs xl:text-4xs lg:text-4xs text-5xs font-thin font-type-1 py-[10px]  px-[20px] text-white text-[20px] rounded-full border-[0.5px] border-white`}
+                ${tw`xl:text-4xs lg:text-4xs text-5xs xl:text-4xs lg:text-4xs text-5xs font-thin font-type-1 py-[10px] h-[50px]  px-[20px] text-white text-[20px] rounded-full border-[0.5px] border-white`}
             }
             &-demo{
                 ${tw`lg:block hidden`}

@@ -15,7 +15,7 @@ const ContentWrapper = styled.div<styleProps>(({ $_bg }) => {
         ${tw`mb-[3vh] font-thin font-type-1 xl:text-3xs lg:text-3xs text-4xs`}
     }
     h1{
-        ${tw`font-thin leading-[120%] w-full xl:text-xl lg:text-md text-2xs text-secondary font-type-1`}
+        ${tw`font-thin leading-[120%] w-full xl:text-lg lg:text-md text-2xs text-secondary font-type-1`}
     }
     `, chooseBg($_bg)]
 })

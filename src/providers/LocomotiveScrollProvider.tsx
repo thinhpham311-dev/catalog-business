@@ -21,7 +21,7 @@ const LocomotiveProvider = (props: any) => {
             }
             containerRef={containerRef}
         >
-            <main ref={containerRef} data-scroll-container>
+            <main id="main" ref={containerRef} data-scroll-container>
                 {props.children}
             </main>
         </LocomotiveScrollProvider>

@@ -22,7 +22,7 @@ const BranchWrapper = styled.div(() => [
             ${tw` w-full overflow-x-hidden`}
            
             .branchs-sliders{
-                ${tw`flex py-[10vh] items-center gap-[50px] w-[calc(300px*8)] animate-scroll`}
+                ${tw`flex pt-[10vh] items-center gap-[50px] w-[calc(300px*8)] animate-scroll`}
                 .branchs-slide{
                     ${tw`w-[300px] h-[100px] flex items-center justify-center`}
                     img{
