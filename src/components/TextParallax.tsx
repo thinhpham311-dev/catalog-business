@@ -14,7 +14,6 @@ const TextParallax = (props: any) => {
     const handleParallaxText = (param: HTMLHeadingElement) => {
         const childEl = param?.querySelectorAll("span")
         setTimeout(() => {
-
             if (scroll) {
                 return gsap.to(childEl, {
                     scrollTrigger: {
@@ -46,7 +45,7 @@ const TextParallax = (props: any) => {
 
 
     return (
-        <h1 ref={textRef}>
+        <h1 ref={textRef} >
             {props.children}
         </h1>
     );

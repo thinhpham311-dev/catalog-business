@@ -1,13 +1,13 @@
 import tw, { styled, css } from 'twin.macro'
 
-const IntroducePannel2Wrapper = styled.div(() => [
-    tw`pt-[5vh] w-full bg-primary-2 `,
+const IntroducePannel2Wrapper = styled.section(() => [
+    tw`pt-[20vh] w-full bg-primary-2 `,
     css`
         .container{
            ${tw`flex flex-wrap container mx-auto px-[4vw]`} 
         }
         .content-left{
-            ${tw`h-full xl:w-[40%] w-full font-type-1 xl:mx-0 lg:mb-[5vh] mb-[3vh]`}
+            ${tw`h-full xl:w-[40%] w-full font-type-1 xl:mx-0 lg:my-[5vh] mb-[3vh]`}
             h1{
                 ${tw`xl:text-3xl lg:text-2xl text-lg font-thin text-white leading-[100%]`}
             }

@@ -19,7 +19,7 @@ const FooterWrapper = styled.footer(() => [
                         ${tw`xl:text-2xs lg:text-3xs text-4xs font-type-1 font-thin`}
                     }
                     .form-group-inline{
-                        ${tw`flex items-center xl:my-3 my-1 border-b-[0.5px] border-secondary hover:border-white transition-all  duration-500`}
+                        ${tw`flex items-center xl:my-3 my-1 border-b-[0.5px] border-secondary hover:border-white focus:border-white transition-all  duration-500`}
                         input{
                             ${tw`w-[calc(100%-50px)] h-[50px] text-4xs text-white bg-transparent focus:outline-0 `}
                         }

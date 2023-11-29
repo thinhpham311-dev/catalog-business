@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 import { CanvasWrapper } from './styles'
-import { CanvasParallax, Circle } from '@/components'
+import { CanvasParallax, Circles } from '@/components'
 
 interface canvasProps {
     isCircle: boolean,
@@ -11,7 +11,7 @@ interface canvasProps {
 
 const Canvas = ({ isCircle, data, numbers }: canvasProps) => (
     <CanvasWrapper id="section-canvas" >
-        <CanvasParallax isElCircle={isCircle && <Circle countNumber={numbers} />} dataImages={data} />
+        <CanvasParallax isElCircle={isCircle && <Circles countNumber={numbers} />} dataImages={data} />
     </CanvasWrapper>
 )
 

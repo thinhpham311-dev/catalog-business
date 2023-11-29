@@ -3,6 +3,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import { gsap } from "gsap";
 import { useLocomotiveScroll } from "react-locomotive-scroll";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import { CirclesWrapper } from "./styles"
 
 interface circleProps {
     countNumber: number | null
@@ -10,7 +11,7 @@ interface circleProps {
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Circle = ({ countNumber }: circleProps) => {
+const Circles = ({ countNumber }: circleProps) => {
     const [startCount, setStartCount] = useState<number>(0)
     const { scroll } = useLocomotiveScroll();
     const circleRef = useRef<HTMLDivElement>(null)
@@ -82,15 +83,15 @@ const Circle = ({ countNumber }: circleProps) => {
         };
     }, [circleEl])
     return (
-        <div ref={circleRef} className="circle"  >
+        <CirclesWrapper ref={circleRef} className="circle"  >
             <div className="circle-inner">
                 <div className="circle-inner--text">
                     <h1>{startCount}%</h1>
                     <span>Magma Index</span>
                 </div>
             </div>
-        </div>
+        </CirclesWrapper>
     )
 }
 
-export default Circle
+export default Circles

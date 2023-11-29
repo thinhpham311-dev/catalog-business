@@ -1,3 +1,19 @@
+const navColors = ["transparent",
+    "transparent",
+    "transparent",
+    "transparent",
+    "transparent",
+    "transparent",
+    "transparent",
+    "transparent",
+    "transparent",
+    "transparent",
+    "#1137ca",
+    "transparent",
+    "transparent",
+    "transparent"
+]
+
 const dataImagesCertify = [
     "/frames00004.png",
     "/frames00007.png",
@@ -127,6 +143,7 @@ const dataImagesConnection = [
 ]
 
 const dataImagesIncrease = [
+    "/bridges00002.png",
     "https://thisismagma.com/assets/home/lore/seq/1.webp",
     "https://thisismagma.com/assets/home/lore/seq/2.webp",
     "https://thisismagma.com/assets/home/lore/seq/3.webp",
@@ -277,6 +294,7 @@ const dataImageBranchs = [
 ]
 
 export {
+    navColors,
     dataImagesCertify,
     dataImagesConnection,
     dataImagesIncrease,

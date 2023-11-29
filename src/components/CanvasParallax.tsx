@@ -87,10 +87,10 @@ const CanvasParallax = ({ dataImages, isElCircle }: CanvasProps) => {
             ScrollTrigger.addEventListener("refresh", () => scroll?.update());
             ScrollTrigger.refresh();
         };
-    }, [scrollCanvas])
+    }, [scrollCanvas, height, width, dataImages])
 
     return (
-        <div className="inner-canvas" ref={canvasRef} data-scroll data-scroll-sticky data-scroll-position={`0 0`} data-scroll-target="#section-canvas">
+        <div className="inner-canvas" ref={canvasRef} data-scroll data-scroll-sticky data-scroll-position={`0 0`} data-scroll-offset={`10`} data-scroll-target="#section-canvas">
             <canvas></canvas>
             {isElCircle}
         </div>

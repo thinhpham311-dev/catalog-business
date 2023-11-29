@@ -1,6 +1,7 @@
 'use client'
 import React from 'react'
 import { HeroWrapper, HeroBottom } from './styles'
+import { Button } from "@/components"
 
 
 const Hero = () => (
@@ -10,8 +11,8 @@ const Hero = () => (
                 <div className="container">
                     <h1>Experience Real  <br /> Estate Agility</h1>
                     <div className="hero--bottom-inner">
-                        <h4 className="hero--bottom-inner--text">Create a digital twin of your existing building <br />  and release the potential of Web3.</h4>
-                        <button className="hero--bottom-inner--button" type="button">LEARN MORE</button>
+                        <h4 className="hero--bottom-inner--text">Create a Digital Twin Token (DTT®) of your <br /> existing building   and release the potential of<br /> Web3.</h4>
+                        <Button type="button" $variant='light'>LEARN MORE</Button>
                     </div>
                 </div>
             </HeroBottom>

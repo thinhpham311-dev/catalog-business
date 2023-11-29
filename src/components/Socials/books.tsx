@@ -1,6 +1,7 @@
 'use client'
 import React from 'react'
 import { BooksWrapper } from "./styles"
+import { Button } from "@/components"
 
 
 const Books = (props: any) => {
@@ -10,7 +11,7 @@ const Books = (props: any) => {
                 <h1 className="title-books">Become an
                     <br />
                     early adopter</h1>
-                <button type="button" className="btn-books">BOOK A DEMO</button>
+                <Button type="button" $variant='primary'>BOOK A DEMO</Button>
             </div>
         </BooksWrapper>
     )

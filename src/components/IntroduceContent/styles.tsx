@@ -1,7 +1,7 @@
 import tw, { styled, css } from 'twin.macro'
 
-const IntroduceContentWrapper = styled.div(() => [
-    tw`relative pb-[10vh] pt-[5vh] h-[auto] w-full bg-primary-2`,
+const IntroduceContentWrapper = styled.section(() => [
+    tw`relative pb-[20vh] pt-[5vh] h-[auto] w-full bg-primary-2`,
     css`
         .container{
             ${tw`container mx-auto px-[4vw]`}

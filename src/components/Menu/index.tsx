@@ -1,12 +1,12 @@
 'use client'
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { gsap } from "gsap";
-import { ButtonHamburgerWrapper, MenuHamburgerWrapper } from './styles'
+import { ImageHamburger, MenuWrapper } from './styles'
+import { Button } from "@/components"
 
-const NavbarHamburger = () => {
+const Menu = () => {
     const [menuTl] = useState(gsap.timeline({ paused: true }));
-
     const menuBars: any = {};
 
     useEffect(() => {
@@ -23,6 +23,7 @@ const NavbarHamburger = () => {
             .to(menuBars.menuWrapper, { display: "block", duration: 0.2, }, 0)
             .to(menuBars.menuOverlap, { opacity: 1, display: "block", duration: 0.2, delay: 0.1 }, 0)
             .to(menuBars.menuContent, { x: 0, duration: 0.3, delay: 0.1 }, 0)
+            .to(".menu-link", { y: 0, duration: 0.3, delay: 0.2 }, 0)
             .reverse();
     }, []);
 
@@ -31,8 +32,8 @@ const NavbarHamburger = () => {
     }
     return (
         <>
-            <ButtonHamburgerWrapper ref={e => (menuBars["btnToggle"] = e)} onClick={handleToggleMenu}>
-                <svg
+            <Button className="btn-toggle" $variant="transparent" $isSmall ref={e => (menuBars["btnToggle"] = e)} onClick={handleToggleMenu}>
+                <ImageHamburger
                     className="menu-btn"
                     viewBox="0 0 384 276"
                     xmlns="http://www.w3.org/2000/svg"
@@ -58,32 +59,46 @@ const NavbarHamburger = () => {
                         y2="261"
                         ref={e => (menuBars["bottomBar"] = e)}
                     />
-                </svg>
-            </ButtonHamburgerWrapper>
-            <MenuHamburgerWrapper ref={e => (menuBars["menuWrapper"] = e)} >
+                </ImageHamburger>
+            </Button>
+            <MenuWrapper ref={e => (menuBars["menuWrapper"] = e)} >
                 <div className="menu-overlap" ref={e => (menuBars["menuOverlap"] = e)} onClick={handleToggleMenu}></div>
                 <div className='menu-content' ref={e => (menuBars["menuContent"] = e)}>
                     <ul className='menu-list'>
                         <li>
-                            <Link href='' className='menu-link title'>Product</Link>
+                            <Link href='' className='menu-link'>Product</Link>
                         </li>
                         <li>
-                            <Link href='' className='menu-link title'>Mission</Link>
+                            <Link href='' className='menu-link'>Mission</Link>
                         </li>
                         <li>
-                            <Link href='' className='menu-link title'>Blog</Link>
+                            <Link href='' className='menu-link'>Blog</Link>
                         </li>
                         <li>
-                            <Link href='' className='menu-link title'>FAQ</Link>
+                            <Link href='' className='menu-link'>FAQ</Link>
                         </li>
                         <li>
-                            <Link href='' className='menu-link title'>Contact</Link>
+                            <Link href='' className='menu-link'>Contact</Link>
                         </li>
                     </ul>
+                    <div className="menu-socials">
+                        <ul>
+                            <li>
+                                <Link href="" className='menu-link'>Twitter</Link>
+                            </li>
+                            <li>
+                                <Link href="" className='menu-link'>Linkedin</Link>
+                            </li>
+                            <li>
+                                <Link href="" className='menu-link'>Instagram</Link>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </MenuHamburgerWrapper>
+            </MenuWrapper>
         </>
+
     )
 }
 
-export default NavbarHamburger
+export default Menu

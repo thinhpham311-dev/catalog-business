@@ -27,11 +27,11 @@ export default {
       keyframes: {
         scroll: {
           'from': { transform: 'translateX(0)' },
-          'to': { transform: 'translateX(calc(-300px * 2))' },
+          'to': { transform: 'translateX(-100%)' },
         }
       },
       animation: {
-        scroll: 'scroll 10s linear infinite',
+        scroll: 'scroll 10s infinite linear',
       }
     },
     fontSize: {
@@ -45,9 +45,9 @@ export default {
       'sm': '2.4rem',
       'xs': '2.2rem',
       '2xs': '1.8rem',
-      '3xs': '1.2rem',
-      '4xs': '1rem',
-      '5xs': '0.75rem'
+      '3xs': '1.5rem',
+      '4xs': '1.2rem',
+      '5xs': '1rem'
     },
   },
   plugins: [],
