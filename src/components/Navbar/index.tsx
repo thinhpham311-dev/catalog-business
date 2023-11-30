@@ -9,17 +9,15 @@ import { Button, Menu } from "@/components"
 
 
 const Navbar = () => {
-    const navRef = useRef<HTMLDivElement>(null)
+    const navRef = useRef<HTMLDivElement>(null);
+
 
     useEffect(() => {
-
         const btnHamburger = navRef.current?.querySelector("button")
         const btnHamburgerEl = btnHamburger as HTMLButtonElement
         const sections = gsap.utils.toArray("section")
 
-
         sections.forEach((section: any, index: number) => {
-            console.log(section.height)
             ScrollTrigger.create({
                 trigger: section,
                 start: "top 6%",
@@ -32,6 +30,7 @@ const Navbar = () => {
             ScrollTrigger.refresh();
         };
     }, [])
+
 
     return (
         <NavbarWrapper data-scroll data-scroll-sticky data-scroll-target="#main">

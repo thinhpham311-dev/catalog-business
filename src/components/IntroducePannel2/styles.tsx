@@ -1,7 +1,7 @@
 import tw, { styled, css } from 'twin.macro'
 
 const IntroducePannel2Wrapper = styled.section(() => [
-    tw`pt-[20vh] w-full bg-primary-2 `,
+    tw`xl:pt-[20vh] pt-[10vh] w-full bg-primary-2 `,
     css`
         .container{
            ${tw`flex flex-wrap container mx-auto px-[4vw]`} 

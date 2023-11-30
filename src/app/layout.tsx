@@ -3,7 +3,6 @@ import GlobalStyles from '@/styles/GlobalStyles'
 import StyledComponentsRegistry from '@/lib/registry'
 import { ScrollTriggerProxy } from "@/components"
 import LocomotiveProvider from "@/providers/LocomotiveScrollProvider"
-import { Loading } from "@/components"
 
 export const metadata: Metadata = {
   title: 'The Catalog Business',
@@ -20,7 +19,6 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <StyledComponentsRegistry>
-          {/* <Loading /> */}
           <LocomotiveProvider>
             <ScrollTriggerProxy />
             <GlobalStyles />

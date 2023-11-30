@@ -4,6 +4,8 @@ import Link from 'next/link'
 import { gsap } from "gsap";
 import { ImageHamburger, MenuWrapper } from './styles'
 import { Button } from "@/components"
+import { FiArrowRight } from "react-icons/fi";
+
 
 const Menu = () => {
     const [menuTl] = useState(gsap.timeline({ paused: true }));
@@ -11,19 +13,16 @@ const Menu = () => {
 
     useEffect(() => {
         menuTl
-            .to(menuBars.topBar, {
-                duration: 0.2,
-                x: 52,
-                stroke: "#fff",
-                rotation: 45
-            })
+            .to(menuBars.topBar, { duration: 0.2, x: 52, stroke: "#fff", rotation: 45 })
             .to(menuBars.middleBar, { duration: 0.2, alpha: 0 }, 0)
             .to(menuBars.bottomBar, { duration: 0.2, x: 52, stroke: "#fff", rotation: -45 }, 0)
             .to(menuBars.btnToggle, { backgroundColor: "#1137ca", duration: 0.3, delay: 0.1 }, 0)
+            .to(".img-logo", { backgroundColor: "#000", duration: 0.3, delay: 0.1 }, 0)
             .to(menuBars.menuWrapper, { display: "block", duration: 0.2, }, 0)
             .to(menuBars.menuOverlap, { opacity: 1, display: "block", duration: 0.2, delay: 0.1 }, 0)
             .to(menuBars.menuContent, { x: 0, duration: 0.3, delay: 0.1 }, 0)
             .to(".menu-link", { y: 0, duration: 0.3, delay: 0.2 }, 0)
+            .to("body", { overflow: "hidden" })
             .reverse();
     }, []);
 
@@ -64,21 +63,22 @@ const Menu = () => {
             <MenuWrapper ref={e => (menuBars["menuWrapper"] = e)} >
                 <div className="menu-overlap" ref={e => (menuBars["menuOverlap"] = e)} onClick={handleToggleMenu}></div>
                 <div className='menu-content' ref={e => (menuBars["menuContent"] = e)}>
+                    <div className="place-setting"></div>
                     <ul className='menu-list'>
                         <li>
-                            <Link href='' className='menu-link'>Product</Link>
+                            <Link href='' className='menu-link'>Product <FiArrowRight /></Link>
                         </li>
                         <li>
-                            <Link href='' className='menu-link'>Mission</Link>
+                            <Link href='' className='menu-link'>Mission <FiArrowRight /></Link>
                         </li>
                         <li>
-                            <Link href='' className='menu-link'>Blog</Link>
+                            <Link href='' className='menu-link'>Blog <FiArrowRight /></Link>
                         </li>
                         <li>
-                            <Link href='' className='menu-link'>FAQ</Link>
+                            <Link href='' className='menu-link'>FAQ <FiArrowRight /></Link>
                         </li>
                         <li>
-                            <Link href='' className='menu-link'>Contact</Link>
+                            <Link href='' className='menu-link'>Contact <FiArrowRight /></Link>
                         </li>
                     </ul>
                     <div className="menu-socials">

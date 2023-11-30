@@ -10,12 +10,14 @@ import {
   IntroduceContent,
   Posts, Branchs,
   Socials,
-  Footer
+  Footer,
+  Loading
 } from '@/components'
 
 const Home = () => {
   return (
     <>
+      {/* <Loading /> */}
       <Navbar />
       <Hero />
       <Contents

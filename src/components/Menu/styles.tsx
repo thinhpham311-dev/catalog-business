@@ -25,16 +25,19 @@ const MenuWrapper = styled.div(() => [
         .menu-content{
             ${tw`xl:w-1/3 lg:w-1/3 w-full h-full shadow-md bg-white translate-x-[100%] h-full overflow-hidden absolute z-10 top-0 right-0 bottom-0  `}
             .menu-list{
-                ${tw`list-none flex justify-center flex-col  p-[15%]  w-full h-[calc(100%-100px)]`}
+                ${tw`list-none flex justify-center flex-col  px-[4vw]  w-full h-[calc(100%-200px)] relative after:w-full after:h-[0.5px] after:absolute after:left-0 after:bottom-0 after:bg-black`}
                 li{
                     ${tw`w-full overflow-hidden my-[3vh]`}
                     .menu-link{
-                        ${tw`xl:text-md lg:text-sm text-xs inline-block font-type-1 w-full text-black hover:text-primary transition-all duration-500 whitespace-nowrap translate-y-[100%]`}
+                        ${tw`xl:text-sm lg:text-xs text-2xs flex items-center justify-between font-type-1 w-full text-black hover:text-primary transition-all duration-500 whitespace-nowrap translate-y-[100%]`}
+                        i{
+                            ${tw`xl:text-sm lg:text-xs text-2xs`}
+                        }
                     }
                 }
             }
-            .menu-socials{
-                ${tw` px-[15%]  flex items-center  w-full h-[100px]`}
+            .menu-socials, .place-setting{
+                ${tw` px-[4vw]  flex items-center  w-full h-[100px]`}
                 ul{
                     ${tw`flex gap-x-10`}
                 }

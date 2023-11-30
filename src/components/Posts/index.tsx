@@ -2,11 +2,13 @@
 import React from 'react'
 import Image from 'next/image'
 import { PostsWrapper } from "./styles"
+import { Button } from "@/components"
+import { FiArrowRight } from "react-icons/fi";
+
 
 const Posts = () => (
     <PostsWrapper>
-        <div className="post-container">
-
+        <div className="container">
             <h1 className="post-title">Recent Blog</h1>
             <div className="post-inner">
                 <div className="post-inner--left">
@@ -35,6 +37,10 @@ const Posts = () => (
                     <h1>Magma At CBRE France's 3rd Tech Talk</h1>
                 </div>
             </div>
+        </div>
+
+        <div className="container">
+            <Button type="button" className="btn-view-all" $variant='primary' >VIEW ALL <FiArrowRight /></Button>
         </div>
     </PostsWrapper>
 )

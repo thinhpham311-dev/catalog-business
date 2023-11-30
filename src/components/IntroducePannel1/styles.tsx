@@ -9,7 +9,7 @@ const PannerIntroducesWrapper = styled.section(() => [
         .content-bottom{
             ${tw`absolute bottom-[5%] left-1/2 -translate-x-1/2 text-center font-type-1 z-50 xl:w-[auto] w-full`}
             h1{
-                ${tw`text-white mb-[2vh] xl:text-2xl lg:text-xl text-lg  font-thin`}
+                ${tw`text-white mb-[2vh] xl:text-2xl lg:text-xl text-sm  font-thin`}
             }
         }
     `
