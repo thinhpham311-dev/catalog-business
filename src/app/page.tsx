@@ -17,7 +17,6 @@ import {
 const Home = () => {
   return (
     <>
-      {/* <Loading /> */}
       <Navbar />
       <Hero />
       <Contents
@@ -45,6 +44,7 @@ const Home = () => {
       <Socials />
       <Footer />
     </>
+
   )
 }
 

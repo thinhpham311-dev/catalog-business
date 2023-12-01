@@ -7,10 +7,10 @@ import { navColors } from "@/constants"
 import { NavbarWrapper } from './styles'
 import { Button, Menu } from "@/components"
 
+gsap.registerPlugin(ScrollTrigger);
 
 const Navbar = () => {
     const navRef = useRef<HTMLDivElement>(null);
-
 
     useEffect(() => {
         const btnHamburger = navRef.current?.querySelector("button")
@@ -29,7 +29,7 @@ const Navbar = () => {
         return () => {
             ScrollTrigger.refresh();
         };
-    }, [])
+    }, [navRef])
 
 
     return (

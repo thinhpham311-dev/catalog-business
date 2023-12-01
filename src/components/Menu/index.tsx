@@ -24,11 +24,12 @@ const Menu = () => {
             .to(".menu-link", { y: 0, duration: 0.3, delay: 0.2 }, 0)
             .to("body", { overflow: "hidden" })
             .reverse();
-    }, []);
+    }, [menuTl]);
 
     const handleToggleMenu = () => {
         menuTl.reversed(!menuTl.reversed())
     }
+
     return (
         <>
             <Button className="btn-toggle" $variant="transparent" $isSmall ref={e => (menuBars["btnToggle"] = e)} onClick={handleToggleMenu}>
