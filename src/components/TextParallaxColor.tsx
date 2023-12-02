@@ -6,7 +6,7 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const TextParallax = (props: any) => {
+const TextParallaxColor = (props: any) => {
     const { scroll } = useLocomotiveScroll();
     const textRef = useRef<HTMLHeadingElement>(null)
     const scrollText = textRef.current as HTMLHeadingElement
@@ -15,20 +15,25 @@ const TextParallax = (props: any) => {
         const childEl = param?.querySelectorAll("span")
         setTimeout(() => {
             if (scroll) {
-                return gsap.to(childEl, {
+                return gsap.fromTo(childEl, {
+                    color: "#dadada69",
+                    duration: 8,
+                }, {
                     scrollTrigger: {
                         trigger: childEl,
-                        start: `top bottom`,
-                        end: `bottom top`,
+                        start: `top+=50% bottom`,
+                        end: `bottom+=${scrollText.clientHeight}% bottom`,
                         scroller: scroll?.el,
                         scrub: .5,
                     },
                     stagger: .2,
-                    color: `#fff`
+                    color: `#fff`,
+                    duration: 8,
                 })
             }
         })
     }
+
 
     useEffect(() => {
         if (scrollText) {
@@ -51,4 +56,4 @@ const TextParallax = (props: any) => {
     );
 }
 
-export default TextParallax;
+export default TextParallaxColor;

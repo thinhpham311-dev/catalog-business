@@ -37,7 +37,7 @@ const MenuWrapper = styled.div(() => [
                 }
             }
             .menu-socials, .place-setting{
-                ${tw` px-[4vw]  flex items-center  w-full h-[100px]`}
+                ${tw` px-[4vw]  flex items-center xl:justify-start lg:justify-start justify-center  w-full h-[100px]`}
                 ul{
                     ${tw`flex gap-x-10`}
                 }

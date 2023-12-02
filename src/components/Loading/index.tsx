@@ -22,11 +22,7 @@ const Loading = (props: any) => {
 
 
     const reveal = () => {
-        const tl = gsap.timeline({
-            onComplete: () => {
-                console.log("completed");
-            },
-        });
+        const tl = gsap.timeline()
         tl.to(".count", 0.25, {
             delay: 0.5,
             opacity: 0
@@ -48,11 +44,6 @@ const Loading = (props: any) => {
         <>
             <LoadingWrapper className="loading">
                 <Overlay >
-                    <div className="bar"></div>
-                    <div className="bar"></div>
-                    <div className="bar"></div>
-                    <div className="bar"></div>
-                    <div className="bar"></div>
                     <div className="bar"></div>
                     <div className="bar"></div>
                     <div className="bar"></div>

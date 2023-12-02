@@ -26,10 +26,8 @@ const Navbar = () => {
                 toggleActions: "restart none none reverse",
             })
         })
-        return () => {
-            ScrollTrigger.refresh();
-        };
     }, [navRef])
+
 
 
     return (
