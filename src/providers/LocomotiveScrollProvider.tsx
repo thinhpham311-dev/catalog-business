@@ -12,11 +12,11 @@ const LocomotiveProvider = (props: any) => {
                     multiplier: .3,
                     tablet: {
                         smooth: true,
-                        multiplier: .3,
+                        multiplier: 1,
                     },
                     smartphone: {
                         smooth: true,
-                        multiplier: .3,
+                        multiplier: 1,
                     }
                     // ... all available Locomotive Scroll instance options 
                 }
