@@ -10,7 +10,7 @@ const FooterWrapper = styled.footer(() => [
                 &--menu{
                     ${tw`grid grid-cols-2 xl:gap-x-32 lg:gap-x-32 gap-x-20 gap-y-4`}
                     a{
-                        ${tw`xl:text-3xs lg:text-3xs text-4xs font-thin font-type-1 `}
+                        ${tw`xl:text-3xs lg:text-3xs text-4xs font-thin font-type-1 hover:text-primary`}
                     }
                 }
                 &--form{
