@@ -6,7 +6,7 @@ interface styleProps {
 
 const ContentWrapper = styled.section<styleProps>(({ $_bg }) => {
     return [
-        tw`flex items-start justify-center flex-col h-[auto] w-full relative pt-[20vh] pb-0 text-white bg-primary-2 relative`,
+        tw`flex items-start justify-center flex-col h-[auto] w-full relative xl:pt-[20vh] lg:pt-[15px] pt-[50px] pb-0 text-white bg-primary-2 relative`,
         css`
         .container{
             ${tw`container mx-auto px-[4vw]`}
