@@ -13,7 +13,7 @@ const PostsWrapper = styled.section(() => [
             &--left{
                 ${tw` h-full xl:w-[48%] w-full  rounded-[10px] overflow-hidden`}
                 img{
-                    ${tw`w-full object-cover h-[25vh] `}
+                    ${tw`w-full object-cover h-[25vh] hover:scale-110 transition-all duration-500`}
                 }
             }
             &--right{

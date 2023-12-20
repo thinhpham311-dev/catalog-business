@@ -6,7 +6,7 @@ import { Button, TextParallaxRotate } from "@/components"
 const IntroducesPannel1 = () => {
 
     return (
-        <PannerIntroducesWrapper>
+        <PannerIntroducesWrapper className="item">
             <div className="content-bottom">
                 <TextParallaxRotate>Magma DTT®</TextParallaxRotate>
                 <Button type="button" $variant='light'>LEARN MORE</Button>

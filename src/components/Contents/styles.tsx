@@ -6,7 +6,7 @@ interface styleProps {
 
 const ContentWrapper = styled.section<styleProps>(({ $_bg }) => {
     return [
-        tw`flex items-start justify-center flex-col h-[auto] w-full relative py-[20vh] text-white bg-primary-2`,
+        tw`flex items-start justify-center flex-col h-[auto] w-full relative pt-[20vh] pb-0 text-white bg-primary-2 relative`,
         css`
         .container{
             ${tw`container mx-auto px-[4vw]`}
@@ -15,7 +15,7 @@ const ContentWrapper = styled.section<styleProps>(({ $_bg }) => {
         ${tw`mb-[3vh] font-thin font-type-1 xl:text-3xs lg:text-3xs text-5xs`}
     }
     h1{
-        ${tw`font-thin leading-[120%] w-full xl:text-xl lg:text-lg text-2xs font-type-1 xl:tracking-normal tracking-tighter`}
+        ${tw`font-thin leading-[120%] w-full h-full xl:text-xl lg:text-lg text-2xs font-type-1 xl:tracking-normal tracking-tighter my-0`}
     }
     `, chooseBg($_bg)]
 })

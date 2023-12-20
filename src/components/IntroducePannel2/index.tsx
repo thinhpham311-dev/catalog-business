@@ -3,7 +3,7 @@ import React from 'react'
 import { IntroducePannel2Wrapper } from "./styles"
 
 const IntroducePannel2 = () => (
-    <IntroducePannel2Wrapper>
+    <IntroducePannel2Wrapper className="item">
         <div className="container">
             <div className="content-left">
                 <h1>What is <br /> Magma?</h1>

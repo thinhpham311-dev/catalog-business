@@ -22,7 +22,6 @@ const Menu = () => {
             .to(menuBars.menuOverlap, { opacity: 1, display: "block", duration: 0.2, delay: 0.1 }, 0)
             .to(menuBars.menuContent, { x: 0, duration: 0.2, delay: 0.1 }, 0)
             .to(".menu-link", { y: 0, duration: 0.2, delay: 0.2 }, 0)
-            .to("body", { overflow: "hidden" }, 0)
             .reverse();
     }, []);
 
@@ -82,19 +81,19 @@ const Menu = () => {
                             <Link href='' className='menu-link'>Contact <FiArrowRight /></Link>
                         </li>
                     </ul>
-                    <div className="menu-socials">
-                        <ul>
-                            <li>
-                                <Link href="" className='menu-link'>Twitter</Link>
-                            </li>
-                            <li>
-                                <Link href="" className='menu-link'>Linkedin</Link>
-                            </li>
-                            <li>
-                                <Link href="" className='menu-link'>Instagram</Link>
-                            </li>
-                        </ul>
-                    </div>
+
+                    <ul className="menu-socials">
+                        <li>
+                            <Link href="" className='menu-link'>Twitter</Link>
+                        </li>
+                        <li>
+                            <Link href="" className='menu-link'>Linkedin</Link>
+                        </li>
+                        <li>
+                            <Link href="" className='menu-link'>Instagram</Link>
+                        </li>
+                    </ul>
+
                 </div>
             </MenuWrapper>
         </>

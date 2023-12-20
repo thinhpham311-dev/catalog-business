@@ -9,7 +9,7 @@ const Socials = (props: any) => {
     return (
         <>
             <Books />
-            <SocialsWrapper>
+            <SocialsWrapper className="item">
                 <div className="socials-inner">
                     <div className="container">
                         <h1>Twitter</h1>

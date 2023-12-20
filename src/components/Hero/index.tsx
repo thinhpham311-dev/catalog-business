@@ -6,7 +6,7 @@ import { Button } from "@/components"
 
 const Hero = () => (
     <>
-        <HeroWrapper data-scroll data-scroll-speed="-5" id="hero">
+        <HeroWrapper className="item" data-scroll data-scroll-speed="-5" id="hero">
             <HeroBottom>
                 <div className="container">
                     <h1>Experience Real  <br /> Estate Agility</h1>

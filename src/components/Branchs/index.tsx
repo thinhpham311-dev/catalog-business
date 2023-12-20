@@ -7,7 +7,7 @@ const Branchs = (props: any) => {
 
 
     return (
-        <BranchWrapper>
+        <BranchWrapper className="item">
             <div className="branchs-inner"></div>
             <div className="branchs-inner">
                 <div className="container">

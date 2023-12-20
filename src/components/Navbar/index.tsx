@@ -3,6 +3,7 @@ import React, { useEffect, useRef } from 'react'
 import Image from 'next/image'
 import { gsap } from "gsap"
 import ScrollTrigger from "gsap/ScrollTrigger";
+import { useLocomotiveScroll } from "react-locomotive-scroll";
 import { navColors } from "@/constants"
 import { NavbarWrapper } from './styles'
 import { Button, Menu } from "@/components"
@@ -10,19 +11,20 @@ import { Button, Menu } from "@/components"
 gsap.registerPlugin(ScrollTrigger);
 
 const Navbar = () => {
+    const { scroll } = useLocomotiveScroll();
     const navRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
         const btnHamburger = navRef.current?.querySelector("button")
         const btnHamburgerEl = btnHamburger as HTMLButtonElement
-        const sections = gsap.utils.toArray("section")
-
+        const sections = gsap.utils.toArray("section.item")
         sections.forEach((section: any, index: number) => {
             ScrollTrigger.create({
                 trigger: section,
                 start: "top 6%",
                 end: "bottom 6%",
-                animation: gsap.to(btnHamburgerEl, { backgroundColor: navColors[index], immediateRender: false }),
+                scroller: scroll?.el,
+                animation: gsap.to(btnHamburgerEl, { backgroundColor: navColors[index] }),
                 toggleActions: "restart none none reverse",
             })
         })

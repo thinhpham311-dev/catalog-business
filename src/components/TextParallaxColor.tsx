@@ -3,6 +3,7 @@ import React, { useRef, useEffect } from 'react';
 import { gsap } from "gsap";
 import { useLocomotiveScroll } from "react-locomotive-scroll";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import tw, { styled } from 'twin.macro';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -18,15 +19,16 @@ const TextParallaxColor = (props: any) => {
                 return gsap.fromTo(childEl, {
                     color: "#dadada69",
                     duration: 8,
+                    stagger: .5,
                 }, {
                     scrollTrigger: {
                         trigger: childEl,
-                        start: `top+=50% bottom`,
-                        end: `bottom+=${scrollText.clientHeight}% bottom`,
+                        start: `top bottom`,
+                        end: `bottom+=${scrollText.offsetHeight}px bottom`,
                         scroller: scroll?.el,
                         scrub: .5,
                     },
-                    stagger: .2,
+                    stagger: .5,
                     color: `#fff`,
                     duration: 8,
                 })
@@ -50,10 +52,14 @@ const TextParallaxColor = (props: any) => {
 
 
     return (
-        <h1 ref={textRef} >
+        <Heading ref={textRef} >
             {props.children}
-        </h1>
+        </Heading>
     );
 }
 
 export default TextParallaxColor;
+
+const Heading = styled.h1(() => [
+    tw`block h-[auto]`
+])

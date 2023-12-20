@@ -26,10 +26,10 @@ const TextParallaxColor = (props: any) => {
                 }, {
                     scrollTrigger: {
                         trigger: childEl,
-                        start: `top+=50% bottom`,
+                        start: `top bottom`,
                         end: `bottom+=${scrollText.offsetHeight}% bottom`,
                         scroller: scroll?.el,
-                        scrub: .5
+                        scrub: .5,
                     },
                     duration: 10,
                     stagger: {
@@ -40,6 +40,7 @@ const TextParallaxColor = (props: any) => {
                 })
             }
         })
+        console.log(scrollText.offsetHeight)
     }
 
     useEffect(() => {
@@ -67,6 +68,6 @@ export default TextParallaxColor;
 
 const Heading = styled.h2(() => [
     css`span{
-        ${tw`inline-block`}
+        ${tw`inline-block h-[auto]`}
     }`
 ])

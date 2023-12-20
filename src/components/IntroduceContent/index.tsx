@@ -3,7 +3,7 @@ import React from 'react'
 import { IntroduceContentWrapper } from "./styles"
 
 const IntroduceContent = () => (
-    <IntroduceContentWrapper>
+    <IntroduceContentWrapper className="item">
         <div className="container mx-auto px-[4vw]">
             <div className="content">
                 <div className="content-inner">

@@ -7,7 +7,7 @@ import { FiArrowRight } from "react-icons/fi";
 
 
 const Posts = () => (
-    <PostsWrapper>
+    <PostsWrapper className="item">
         <div className="container">
             <h1 className="post-title">Recent Blog</h1>
             <div className="post-inner">

@@ -6,7 +6,7 @@ import { Button } from "@/components"
 
 const Books = (props: any) => {
     return (
-        <BooksWrapper>
+        <BooksWrapper className="item">
             <div className="container">
                 <h1 className="title-books">Become an
                     <br />

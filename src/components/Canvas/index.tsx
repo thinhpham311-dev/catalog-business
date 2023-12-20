@@ -10,7 +10,7 @@ interface canvasProps {
 }
 
 const Canvas = ({ isCircle, data, numbers }: canvasProps) => (
-    <CanvasWrapper id="section-canvas" >
+    <CanvasWrapper className="item" id="section-canvas" >
         <CanvasParallax isElCircle={isCircle && <Circles countNumber={numbers} />} dataImages={data} />
     </CanvasWrapper>
 )
