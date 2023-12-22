@@ -4,7 +4,7 @@ const IntroducePannel2Wrapper = styled.section(() => [
     tw`xl:pt-[20vh] pt-[10vh] w-full bg-primary-2 `,
     css`
         .container{
-           ${tw`flex flex-wrap container mx-auto px-[4vw]`} 
+           ${tw`flex flex-wrap`} 
         }
         .content-left{
             ${tw`h-full xl:w-[40%] w-full font-type-1 xl:mx-0 lg:my-[5vh] mb-[3vh]`}

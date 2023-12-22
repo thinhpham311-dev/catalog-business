@@ -66,7 +66,6 @@ const CanvasParallax = ({ dataImages, isElCircle }: CanvasProps) => {
                     start: `top top`,
                     end: `250% top`,
                     scrub: .5,
-                    pinSpacing: false
                 },
                 onUpdate: render,
             });

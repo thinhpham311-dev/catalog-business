@@ -15,7 +15,7 @@ const Overlay = styled.div(() => [
 ])
 
 const Count = styled.h1(() => [
-    tw`xl:text-3xl lg:text-2xs text-md font-bold text-white text-center font-type-1 z-[99] opacity-100 overflow-hidden`
+    tw`xl:text-2xl lg:text-xs text-md font-thin text-white text-center font-type-1 z-[99] opacity-100 overflow-hidden`
 ])
 
 export {

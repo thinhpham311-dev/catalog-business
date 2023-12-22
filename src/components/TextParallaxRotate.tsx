@@ -40,7 +40,6 @@ const TextParallaxColor = (props: any) => {
                 })
             }
         })
-        console.log(scrollText.offsetHeight)
     }
 
     useEffect(() => {

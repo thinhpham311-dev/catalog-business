@@ -20,53 +20,45 @@ const Circles = ({ countNumber }: circleProps) => {
 
 
     const circleScroll = (param: HTMLDivElement) => {
+        const circleChildEl = param?.querySelector(".circle-inner")
+        const numbers = param?.querySelector(".circle-inner h1")
         if (scroll) {
-            gsap.to(param, {
+            const tl = gsap.timeline(
+                {
+                    scrollTrigger: {
+                        trigger: numbers,
+                        start: "top top",
+                        end: "+=1800px",
+                        scroller: scroll?.el,
+                        scrub: .5,
+                    }
+                }
+            )
+            tl.fromTo(param, {
+                scale: 1,
+                opacity: 0
+            }, {
                 scrollTrigger: {
                     trigger: param,
-                    start: `top+=100% center`,
+                    start: `top+=150% bottom`,
                     end: `bottom top`,
                     scroller: scroll?.el,
                     scrub: .5,
+                    markers: true
                 },
                 scale: 1.5,
-            })
-
-        }
-    }
-
-    const circleChildScroll = (param: HTMLDivElement) => {
-        const circleChildEl = param?.querySelector(".circle-inner")
-        if (scroll) {
-            gsap.to(circleChildEl, {
-                scrollTrigger: {
-                    trigger: circleChildEl,
-                    start: `top+=100% center`,
-                    end: `bottom top`,
-                    scroller: scroll?.el,
-                    scrub: .5
-                },
-                backgroundColor: `#0a3bce91`,
-            })
-        }
-    }
-
-    const countUpScroll = (param: HTMLDivElement) => {
-        const numbers = param?.querySelector(".circle-inner h1")
-        gsap.timeline({
-            scrollTrigger: {
-                trigger: numbers,
-                start: "top top",
-                end: "+=1000px",
-                scroller: scroll?.el,
-                scrub: .5,
-            }
-        })
-            .to(num, {
+                opacity: 1
+            }).to(num, {
                 var: countNumber, duration: 1, ease: "none", onUpdate: countUp
+            }).to(param, {
+                scale: 1.2,
+                opacity: 0
             })
 
+        }
     }
+
+
 
     const countUp = () => {
         let count = JSON.parse(JSON.stringify(num.var))
@@ -75,8 +67,6 @@ const Circles = ({ countNumber }: circleProps) => {
 
     useEffect(() => {
         circleScroll(circleEl)
-        circleChildScroll(circleEl)
-        countUpScroll(circleEl)
         return () => {
             ScrollTrigger.addEventListener("refresh", () => scroll?.update());
             ScrollTrigger.refresh();

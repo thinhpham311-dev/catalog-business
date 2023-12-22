@@ -2,8 +2,8 @@
 import React from 'react'
 import { createGlobalStyle } from 'styled-components'
 import FontsCss from './fonts.css'
-import tw, { GlobalStyles as BaseStyles, styled, css } from 'twin.macro'
-
+import tw, { GlobalStyles as BaseStyles } from 'twin.macro'
+import { ScrollTriggerProxy } from "@/components"
 
 const CustomStyles = createGlobalStyle`
   ${FontsCss}
@@ -16,6 +16,10 @@ const CustomStyles = createGlobalStyle`
   main{
     ${tw`relative overflow-x-hidden bg-primary`}
   }
+
+  .container{
+    ${tw`container mx-auto xl:px-[2vw] px-[4vw]`}
+}
 
   h1, h2, h3, h4, h5, h6, p {
     margin: 0;
@@ -80,6 +84,7 @@ const GlobalStyles = () => (
   <>
     <BaseStyles />
     <CustomStyles />
+    <ScrollTriggerProxy />
   </>
 )
 

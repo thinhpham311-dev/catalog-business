@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import GlobalStyles from '@/styles/GlobalStyles'
 import StyledComponentsRegistry from '@/lib/registry'
-import { ScrollTriggerProxy } from "@/components"
 import LocomotiveProvider from "@/providers/LocomotiveScrollProvider"
 import { Loading } from "@/components"
 
@@ -22,7 +21,6 @@ export default function RootLayout({
         <StyledComponentsRegistry>
           <Loading>
             <LocomotiveProvider>
-              <ScrollTriggerProxy />
               <GlobalStyles />
               {children}
             </LocomotiveProvider>

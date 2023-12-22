@@ -6,7 +6,7 @@ const SocialsWrapper = styled.section(() => [
         .socials-inner{
             ${tw`relative flex items-center py-0  font-type-1 h-[33.3%] w-full text-white border-t-[0.5px] border-t-secondary-1 border-b-[0.5px] border-b-secondary-1`}
            .container{
-                ${tw`flex items-center justify-between container mx-auto px-[4vw]`}
+                ${tw`flex items-center justify-between`}
                svg{
                    ${tw`font-thin xl:text-md lg:text-md text-sm relative z-50 `}
                 }
@@ -28,9 +28,6 @@ const SocialsWrapper = styled.section(() => [
 const BooksWrapper = styled.section(() => [
     tw`relative py-[10vh] h-[55vh] w-full bg-black `,
     css`
-        .container{
-            ${tw`container mx-auto px-[4vw]`}
-        }
         h1.title-books{
             ${tw`xl:text-3xl lg:text-2xl text-lg mb-[5vh] font-type-1  font-thin text-white font-type-1 leading-[100%]`}
         }
