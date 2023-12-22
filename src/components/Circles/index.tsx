@@ -53,7 +53,6 @@ const Circles = ({ countNumber }: circleProps) => {
                 scale: 1.2,
                 opacity: 0
             })
-
         }
     }
 
