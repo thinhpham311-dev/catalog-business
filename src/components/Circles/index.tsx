@@ -44,7 +44,6 @@ const Circles = ({ countNumber }: circleProps) => {
                     end: `bottom top`,
                     scroller: scroll?.el,
                     scrub: .5,
-                    markers: true
                 },
                 scale: 1.5,
                 opacity: 1
