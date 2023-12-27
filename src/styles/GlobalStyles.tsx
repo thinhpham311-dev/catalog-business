@@ -45,14 +45,14 @@ const CustomStyles = createGlobalStyle`
     overflow: hidden; }
   
   .has-scroll-smooth [data-scroll-container] {
-    min-height: 100vh; }
+    min-height: dvh; }
   
   .c-scrollbar {
     position: absolute;
     right: 0;
     top: 0;
     width: 11px;
-    height: 100vh;
+    height: dvh;
     transform-origin: center right;
     transition: transform 0.3s, opacity 0.3s;
     opacity: 0; }

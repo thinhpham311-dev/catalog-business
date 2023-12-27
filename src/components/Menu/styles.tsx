@@ -17,7 +17,7 @@ const ImageHamburger = styled.svg(() => [
 ])
 
 const MenuWrapper = styled.div(() => [
-    tw`fixed left-0 top-0 hidden  z-[-10] w-0 !h-[100vh] w-full`,
+    tw`fixed left-0 top-0 hidden  z-[-10] w-0 !h-dvh w-full`,
     css`
         .menu-overlap{
             ${tw`absolute z-10 top-0 right-0 bottom-0 opacity-0 hidden w-full h-full bg-[rgba(10,60,206,.6)] `}

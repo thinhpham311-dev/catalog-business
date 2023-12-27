@@ -2,7 +2,7 @@ import tw, { styled, css, theme } from 'twin.macro'
 
 
 const HeroWrapper = styled.section(() => [
-    tw`w-full h-[100vh] relative`,
+    tw`w-full h-dvh relative`,
     css`
         video{
             ${tw`object-cover w-full h-full`}

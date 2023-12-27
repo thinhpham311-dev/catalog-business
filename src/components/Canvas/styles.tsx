@@ -4,7 +4,7 @@ const CanvasWrapper = styled.section(() => [
     tw`relative w-full h-[350vh] bg-primary-2`,
     css`
         .inner-canvas{
-         ${tw`relative w-full overflow-hidden h-[100vh] `}
+         ${tw`relative w-full overflow-hidden h-dvh `}
             .circle{
                 ${tw`flex items-center justify-center absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 z-[9] xl:h-[500px] xl:w-[500px] h-[300px] w-[300px]  rounded-full border-[0.5px] border-[#ffffff3b] z-50`}
                 &-inner{
@@ -19,7 +19,7 @@ const CanvasWrapper = styled.section(() => [
             }
         }
         canvas{
-            ${tw`relative max-w-full max-h-[100vh]`}
+            ${tw`relative max-w-full max-h-dvh`}
         }
     `
 ])
