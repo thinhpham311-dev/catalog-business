@@ -89,7 +89,7 @@ const CanvasParallax = ({ dataImages, isElCircle }: CanvasProps) => {
     }, [scrollCanvas, height, width, dataImages])
 
     return (
-        <div className="inner-canvas" ref={canvasRef} data-scroll data-scroll-sticky data-scroll-position={`0 0`} data-scroll-offset={`10`} data-scroll-target="#section-canvas">
+        <div className="inner-canvas" ref={canvasRef} data-scroll data-scroll-sticky data-scroll-target="#section-canvas">
             <canvas></canvas>
             {isElCircle}
         </div>

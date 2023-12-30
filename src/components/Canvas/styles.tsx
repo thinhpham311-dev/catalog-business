@@ -1,7 +1,7 @@
 import tw, { styled, css } from 'twin.macro'
 
 const CanvasWrapper = styled.section(() => [
-    tw`relative w-full h-[350vh] bg-primary-2`,
+    tw`relative w-full h-[350dvh] bg-primary-2`,
     css`
         .inner-canvas{
          ${tw`relative w-full overflow-hidden h-dvh `}

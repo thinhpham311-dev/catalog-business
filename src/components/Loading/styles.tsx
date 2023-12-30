@@ -10,7 +10,7 @@ const LoadingWrapper = styled.div(() => [
 const Overlay = styled.div(() => [
     tw`absolute h-[2px] top-0 left-0 z-10 w-full flex`,
     css`.bar{
-        ${tw`w-1/5 h-[105vh] bg-primary shadow-[rgba(0, 0, 0, 0.16) 0px 1px 4px]`}
+        ${tw`w-1/5 h-dvh bg-primary shadow-[rgba(0, 0, 0, 0.16) 0px 1px 4px]`}
     }`
 ])
 

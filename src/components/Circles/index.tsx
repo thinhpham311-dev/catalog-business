@@ -28,7 +28,7 @@ const Circles = ({ countNumber }: circleProps) => {
                     scrollTrigger: {
                         trigger: numbers,
                         start: "top top",
-                        end: "+=1800px",
+                        end: "+=300%",
                         scroller: scroll?.el,
                         scrub: .5,
                     }
