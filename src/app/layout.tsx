@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import GlobalStyles from '@/styles/GlobalStyles'
 import StyledComponentsRegistry from '@/lib/registry'
 import LocomotiveProvider from "@/providers/LocomotiveScrollProvider"
@@ -23,6 +24,7 @@ export default function RootLayout({
             <LocomotiveProvider>
               <GlobalStyles />
               {children}
+              <SpeedInsights />
             </LocomotiveProvider>
           </Loading>
         </StyledComponentsRegistry>

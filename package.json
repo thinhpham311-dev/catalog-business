@@ -11,6 +11,7 @@
     "export": "next build && next start"
   },
   "dependencies": {
+    "@vercel/speed-insights": "^1.0.9",
     "gsap": "^3.12.2",
     "locomotive-scroll": "^4.1.4",
     "next": "^13.4.10",
