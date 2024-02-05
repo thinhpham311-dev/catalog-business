@@ -10,8 +10,7 @@ import {
   IntroduceContent,
   Posts, Branchs,
   Socials,
-  Footer,
-  Loading
+  Footer
 } from '@/components'
 
 const Home = () => {

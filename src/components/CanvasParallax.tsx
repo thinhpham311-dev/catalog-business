@@ -33,7 +33,7 @@ const CanvasParallax = ({ dataImages, isElCircle }: CanvasProps) => {
     }
 
     const scaleImage = (img: HTMLImageElement, ctx: any) => {
-        let canvas = ctx.canvas;
+        let canvas = ctx?.canvas;
         let hRatio = canvas.width / img.width;
         let vRatio = canvas.height / img.height;
         let ratio = Math.max(hRatio, vRatio);
@@ -65,7 +65,7 @@ const CanvasParallax = ({ dataImages, isElCircle }: CanvasProps) => {
                     scroller: scroll?.el,
                     start: `top top`,
                     end: `250% top`,
-                    scrub: .5,
+                    scrub: .1,
                 },
                 onUpdate: render,
             });
