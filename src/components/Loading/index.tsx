@@ -15,7 +15,7 @@ const Loading = (props: any) => {
                     ? counter + 1
                     : (clearInterval(count), setCounter(100), reveal())
             );
-        }, 25);
+        }, 5);
 
 
     }, []);
