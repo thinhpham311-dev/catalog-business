@@ -49,8 +49,9 @@ const TextParallaxColor = (props: any) => {
                 clutter += `<span>${dets}</span>`
                 scrollText.innerHTML = clutter;
             })
-            if (clutter && clutter.length > 0)
+            if (clutter && clutter.length > 0) {
                 handleParallaxText(scrollText)
+            }
         }
 
     }, [scrollText]);
