@@ -9,7 +9,7 @@ const NavbarWrapper = styled.nav(() => [
         .right-navbar--button{
             ${tw`flex gap-x-[15px]`}
             .btn-demo{
-                ${tw`lg:block hidden`}
+                ${tw`lg:block hidden `}
             }
             .btn-toggle{
                 ${tw`w-[70px] py-3 px-1`}

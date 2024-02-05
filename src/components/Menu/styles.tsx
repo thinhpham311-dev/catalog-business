@@ -23,7 +23,7 @@ const MenuWrapper = styled.div(() => [
             ${tw`absolute z-10 top-0 right-0 bottom-0 opacity-0 hidden w-full h-full bg-[rgba(10,60,206,.6)] `}
         }
         .menu-content{
-            ${tw`xl:w-1/3 lg:w-1/3 w-full h-full shadow-md bg-white translate-x-[100%] h-full overflow-hidden absolute z-10 top-0 right-0 bottom-0  `}
+            ${tw`xl:w-1/3 lg:w-1/3 w-full h-full shadow-md bg-white translate-x-[100%] h-full overflow-hidden absolute z-50 top-0 right-0 bottom-0  `}
             .menu-list{
                 ${tw`list-none flex justify-center flex-col  px-[4vw]  w-full h-[calc(100%-200px)] relative after:w-full after:h-[0.5px] after:absolute after:left-0 after:bottom-0 after:bg-black`}
                 li{

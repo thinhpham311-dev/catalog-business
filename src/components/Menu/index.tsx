@@ -17,6 +17,7 @@ const Menu = () => {
             .to(menuBars.middleBar, { duration: 0.2, alpha: 0 }, 0)
             .to(menuBars.bottomBar, { duration: 0.2, x: 52, stroke: "#fff", rotation: -45 }, 0)
             .to(menuBars.btnToggle, { backgroundColor: "#1137ca", duration: 0.2, delay: 0.1 }, 0)
+            .to(".btn-demo", { zIndex: "-1", duration: 0.2, delay: 0.1 }, 0)
             .to(".img-logo", { backgroundColor: "#000", duration: 0.2, delay: 0.1 }, 0)
             .to(menuBars.menuWrapper, { display: "block", duration: 0.2, }, 0)
             .to(menuBars.menuOverlap, { opacity: 1, display: "block", duration: 0.2, delay: 0.1 }, 0)
